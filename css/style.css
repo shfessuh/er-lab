@@ -1,0 +1,67 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container-wrap {
+  display: flex;
+  height: 100vh;
+}
+aside#colorlib-aside {
+  width: 350px;
+  background: #f79d9d;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+.author-img {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+#colorlib-logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+#colorlib-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  margin-bottom: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  padding: 8px;
+}
+nav ul li.active a {
+  color: rgb(6, 55, 94);
+  border-left: 4px solid orange;
+  padding-left: 4px;
+}
+.tab-section {
+  display: none;
+}
+.tab-section.active {
+  display: block;
+}
+.domain-content {
+  display: none;
+}
+.domain-content.active {
+  display: block;
+}
+.domain-tabs button {
+  margin-right: 8px;
+}

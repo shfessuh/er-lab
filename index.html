@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Structural Drivers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="colorlib-page">
+      <div class="container-wrap">
+        <aside id="colorlib-aside" role="complementary">
+          <div class="text-center">
+            <div class="author-img">
+              <img src="lab-logo.png" alt="Logo" style="width:100%; height:auto;" />
+            </div>
+            <h1 id="colorlib-logo"><a href="#">Structural Drivers</a></h1>
+          </div>
+          <nav id="colorlib-main-menu" role="navigation">
+            <ul>
+              <li class="nav-link active" data-tab="about"><a href="#">About</a></li>
+              <li class="nav-link" data-tab="domains"><a href="#">Domains</a></li>
+              <li class="nav-link" data-tab="dataprep"><a href="#">Data Prep</a></li>
+              <li class="nav-link" data-tab="repos"><a href="#">Repos</a></li>
+              <li class="nav-link" data-tab="codebook"><a href="#">Codebook</a></li>
+              <li class="nav-link" data-tab="contact"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div id="colorlib-main">
+          <!-- About Section -->
+          <section id="about" class="tab-section active">
+            <h2>About</h2>
+            <p>Racial and ethnic disparities in maternal and child health are driven by upstream structural conditions such as housing, education, labor markets, infrastructure, and governance.</p>
+          </section>
+
+          <!-- Domains Tab-->
+          <section id="domains" class="tab-section">
+            <h2>Domains</h2>
+            <p><em>This framework groups key structural drivers into domains that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
+            <div class="domain-tabs">
+              <button class="btn btn-default domain-tab" data-domain="Environment">Environment</button>
+              <button class="btn btn-default domain-tab" data-domain="Economy">Economy</button>
+              <button class="btn btn-default domain-tab" data-domain="Housing">Housing</button>
+              <button class="btn btn-default domain-tab" data-domain="Education">Education</button>
+              <button class="btn btn-default domain-tab" data-domain="Work">Work</button>
+              <button class="btn btn-default domain-tab" data-domain="Power">Power</button>
+              <button class="btn btn-default domain-tab" data-domain="HealthResources">Health Resources</button>
+            </div>
+            <!-- Environment Domain -->
+            <div id="Environment" class="domain-content">
+              <h3>Environment</h3>
+              <p><a href="#" onclick="filterCodebook('Environment');" style="font-size:14px; text-decoration: underline;">Environment Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Economy Domain-->
+            <div id="Economy" class="domain-content">
+              <h3>Economy</h3>
+              <p><a href="#" onclick="filterCodebook('Economy');" style="font-size:14px; text-decoration: underline;">Economy Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Housing Domain -->
+            <div id="Housing" class="domain-content">
+              <h3>Housing</h3>
+              <p><a href="#" onclick="filterCodebook('Housing');" style="font-size:14px; text-decoration: underline;">Housing Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Education Domain -->
+            <div id="Education" class="domain-content">
+              <h3>Education</h3>
+              <p><a href="#" onclick="filterCodebook('Education');" style="font-size:14px; text-decoration: underline;">Education Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Work Domain -->
+            <div id="Work" class="domain-content">
+              <h3>Work</h3>
+              <p><a href="#" onclick="filterCodebook('Work');" style="font-size:14px; text-decoration: underline;">Work Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Power Domain -->
+            <div id="Power" class="domain-content">
+              <h3>Power</h3>
+              <p><a href="#" onclick="filterCodebook('Power');" style="font-size:14px; text-decoration: underline;">Power Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Health Resources Domain -->
+            <div id="HealthResources" class="domain-content">
+              <h3>Health Resources</h3>
+              <p><a href="#" onclick="filterCodebook('Health Resources');" style="font-size:14px; text-decoration: underline;">Health Resources Variables </a></p>
+              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>env1</td>
+                    <td>Air Quality</td>
+                    <td><a href="https://erlab.uchicago.edu" target="_blank">AirNow (2010–2020)</a></td>
+                    <td>EPA air quality measure</td>
+                  </tr>
+                  <tr>
+                    <td>env2</td>
+                    <td>Water Quality</td>
+                    <td>USGS Water Data</td>
+                    <td>2005–2020</td>
+                  </tr>
+                  <tr>
+                    <td>env3</td>
+                    <td>Green Spaces</td>
+                    <td>Tree Canopy Coverage</td>
+                    <td>Urban green coverage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        <!-- Data Prep -->
+          <section id="dataprep" class="tab-section">
+            <h2>Data Prep</h2>
+            <p><em>This framework groups key structural drivers into domains that help explain how racial and ethnic disparities in maternal and child health emerge and persist...</em></p>
+
+            <!-- Buttons -->
+            <div class="dataprep">
+              <div class="button-group">
+                <button class="btn btn-default dataprep-tab active" data-domain="environment">environment</button>
+                <button class="btn btn-default dataprep-tab" data-domain="economy">economy</button>
+                <button class="btn btn-default dataprep-tab" data-domain="housing">housing</button>
+                <button class="btn btn-default dataprep-tab" data-domain="education">education</button>
+                <button class="btn btn-default dataprep-tab" data-domain="work">work</button>
+                <button class="btn btn-default dataprep-tab" data-domain="power">power</button>
+                <button class="btn btn-default dataprep-tab" data-domain="healthresources">health resources</button>
+              </div>
+
+              <!-- One div per domain (no duplicates!) -->
+              <div id="environment" class="dataprep-content" style="display:block;">Environment Data Prep content here</div>
+              <div id="economy" class="dataprep-content" style="display:none;">Economy Data Prep content here</div>
+              <div id="housing" class="dataprep-content" style="display:none;">Housing Data Prep content here</div>
+              <div id="education" class="dataprep-content" style="display:none;">Education Data Prep content here</div>
+              <div id="work" class="dataprep-content" style="display:none;">Work Data Prep content here</div>
+              <div id="power" class="dataprep-content" style="display:none;">Power Data Prep content here</div>
+              <div id="healthresources" class="dataprep-content" style="display:none;">Health Resources Data Prep content here</div>
+            </div>
+          </section>
+
+          <!-- Repos -->
+          <section id="repos" class="tab-section">
+            <h2>Repositories</h2>
+            <p>Links to cleaned data and codebase used in this project.</p>
+          </section>
+
+          <!-- Codebook Tab-->
+          <section id="codebook" class="tab-section">
+            <h2>Codebook</h2>
+            <label for="domainFilter">Filter by Domain:</label>
+            <select id="domainFilter" class="form-control" style="width: 300px; max-width: 100%; margin-bottom: 20px;">
+              <option value="all">Show All</option>
+              <option value="Environment">Environment</option>
+              <option value="Economy">Economy</option>
+              <option value="Housing">Housing</option>
+              <option value="Education">Education</option>
+              <option value="Work">Work</option>
+              <option value="Power">Power</option>
+              <option value="Health Resources">Health Resources</option>
+            </select> 
+
+            <table class="table table-bordered" id="codebookTable">
+              <thead>
+                <tr>
+                  <th>Domain</th>
+                  <th>Subcategory</th>
+                  <th>Dataset</th>
+                  <th>Variable</th>
+                  <th>Variable Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-domain="Environment">
+                  <td><a href="#" onclick="goToDomainSection('Environment')">Environment</a></td>
+                  <td>Air Quality</td>
+                  <td>AirNow</td>
+                  <td>env1_pollutants</td>
+                  <td>integer</td>
+                  <td>Air quality numbers</td>
+                </tr>
+                <tr data-domain="Environment">
+                  <td><a href="#" onclick="goToDomainSection('Environment')">Environment</a></td>
+                  <td>Water Quality</td>
+                  <td>AirNow</td>
+                  <td>env4_water_violation</td>
+                  <td>integer</td>
+                  <td>Count of Safe Drinking Water Act violations</td>
+                </tr>
+                <tr data-domain="Economy">
+                  <td><a href="#" onclick="goToDomainSection('Economy')">Economy</a></td>
+                  <td>Business & Retail</td>
+                  <td>AirNow</td>
+                  <td>ec1_post_offices</td>
+                  <td>integer</td>
+                  <td>Number of post office locations per county</td>
+                </tr>
+                <tr data-domain="Economy">
+                  <td><a href="#" onclick="goToDomainSection('Economy')">Economy</a></td>
+                  <td>Lending & Credit</td>
+                  <td>AirNow</td>
+                  <td>ec9_public_spending</td>
+                  <td>integer</td>
+                  <td>Total government public welfare spending</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="tab-section">
+            <h2>Contact</h2>
+            <p>research-team@email.com</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script>
+      document.querySelectorAll('.nav-link').forEach(tab => {
+        tab.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(this.dataset.tab).classList.add('active');
+        });
+      });
+
+      document.querySelectorAll('.domain-tab').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.domain-tab').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.domain-content').forEach(el => el.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.domain).classList.add('active');
+        });
+      });
+
+      document.getElementById('domainFilter').addEventListener('change', function() {
+        const selected = this.value;
+        const rows = document.querySelectorAll('#codebookTable tbody tr');
+        rows.forEach(row => {
+          const domain = row.getAttribute('data-domain');
+          row.style.display = (selected === 'all' || selected === domain) ? '' : 'none';
+        });
+      });
+
+      document.querySelectorAll('.dataprep-tab').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const domain = this.getAttribute('data-domain');
+          document.querySelectorAll('.dataprep-tab').forEach(el => el.classList.remove('active'));
+          document.querySelectorAll('.dataprep-content').forEach(el => el.style.display = 'none');
+          this.classList.add('active');
+          const content = document.getElementById(domain);
+          if (content) content.style.display = 'block';
+        });
+      });
+
+      function filterCodebook(domain) {
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
+        const codebookTab = document.querySelector('.nav-link[data-tab="codebook"]');
+        codebookTab.classList.add('active');
+        document.getElementById('codebook').classList.add('active');
+        document.getElementById('domainFilter').value = domain;
+
+        const rows = document.querySelectorAll('#codebookTable tbody tr');
+        rows.forEach(row => {
+          const rowDomain = row.getAttribute('data-domain');
+          row.style.display = (rowDomain === domain) ? '' : 'none';
+        });
+
+        setTimeout(() => {
+          document.getElementById('codebook').scrollIntoView({ behavior: 'smooth' });
+        }, 200);
+      }
+
+      function goToDomainSection(domain) {
+        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
+
+        const domainTab = document.querySelector('.nav-link[data-tab="domains"]');
+        domainTab.classList.add('active');
+        document.getElementById('domains').classList.add('active');
+
+        document.querySelectorAll('.domain-tab').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.domain-content').forEach(el => el.classList.remove('active'));
+
+        const domainButton = document.querySelector(`.domain-tab[data-domain="${domain}"]`);
+        const domainSection = document.getElementById(domain);
+        if (domainButton) domainButton.classList.add('active');
+        if (domainSection) {
+          domainSection.classList.add('active');
+          setTimeout(() => {
+            domainSection.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    </script>
+
+  </body>
+</html>
