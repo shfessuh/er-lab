@@ -82,8 +82,8 @@ nav ul li.active a {
   margin-right: 8px;
 }
 
-*:: before,
-*:: after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -132,4 +132,25 @@ nav#colorlib-main-menu li.nav-link:hover a{
 
 nav#colorlib-main-menu li.nav-link:hover::before{
   width: 100%;
+}
+h2.section-header{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1.5s forwards;
+}
+p.section-p{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1s forwards;
+}
+
+@keyframes fadeLEFT{
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
