@@ -9,27 +9,38 @@ body {
 }
 aside#colorlib-aside {
   width: 350px;
-  background: #f79d9d;
+  background: #82a9a8;
   padding: 20px;
   border-right: 1px solid #ddd;
 }
 .author-img {
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
 }
 #colorlib-logo a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f3816a;
+  padding: 15px 70px 15px 70px;
+  display: inline-block;  margin-bottom: 30px;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 2px;
 }
 #colorlib-main {
   flex: 1;
   padding: 40px;
   overflow-y: auto;
 }
+
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -39,16 +50,21 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #156a69;
   font-weight: bold;
   font-size: 18px;
   display: block;
   padding: 8px;
+  transition: background-color 0.4s ease, color 0.4s ease, border-left 0.4s ease, padding-left 0.4s ease;
 }
 nav ul li.active a {
-  color: rgb(6, 55, 94);
-  border-left: 4px solid orange;
+  color: #ffffff;
+  border-left: 4px solid #f3816a;
   padding-left: 4px;
+  text-decoration: none;
+  background-color: #156a69;
+  text-emphasis: bold;
+
 }
 .tab-section {
   display: none;
@@ -64,4 +80,77 @@ nav ul li.active a {
 }
 .domain-tabs button {
   margin-right: 8px;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+nav#colorlib-main-menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  background-color: #82a9a8;
+  z-index: 1;
+  position: relative;
+
+}
+
+
+nav#colorlib-main-menu li.nav-link::before{
+  content: '';
+  background-color: #156a69;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: -1;
+  transition: width .6s ease;
+}
+
+nav#colorlib-main-menu li.nav-link{
+  width: 320px;
+  font-size: 16px;
+  line-height: 40px;
+  position: relative;
+  overflow: hidden;
+  background-color: #82a9a8;
+  z-index: 1;
+}
+
+nav#colorlib-main-menu li.nav-link:hover a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+nav#colorlib-main-menu li.nav-link:hover::before{
+  width: 100%;
+}
+h2.section-header{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1.5s forwards;
+}
+p.section-p{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1s forwards;
+}
+
+@keyframes fadeLEFT{
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
