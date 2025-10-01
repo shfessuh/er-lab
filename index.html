@@ -43,7 +43,7 @@
             <h2 class="section-header">Domains</h2>
             <p class="section-p"><em>This framework groups key structural drivers into domains that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
             <div class="domain-tabs">
-              
+               <button class="btn btn-default domain-tab" data-domain="Administrative">Administrative</button>
               <button class="btn btn-default domain-tab" data-domain="Environment">Environment</button>
               <button class="btn btn-default domain-tab" data-domain="Economy">Economy</button>
               <button class="btn btn-default domain-tab" data-domain="Housing">Housing</button>
@@ -52,6 +52,32 @@
               <button class="btn btn-default domain-tab" data-domain="Power">Power</button>
               <button class="btn btn-default domain-tab" data-domain="HealthResources">Health Resources</button>
             </div>
+
+ <!-- Administrative Domain -->
+            <div id="Administrative" class="domain-content">
+              <h3 >Administrative</h3>
+              <p><a href="#" onclick="filterCodebook('Administrative');" style="font-size:14px; text-decoration: underline;">Administrative Variables</a></p>
+              <p>This data collection focuses on (XYZ)</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Subcategory</th>
+                    <th>Dataset</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>a1</td>
+                    <td>FIPS Codes</td>
+                    <td><a href="https://github.com/vera-institute/incarceration-trends?tab=readme-ov-file" target="_blank">Vera Institute Incarceration Trends</a></td>
+                    <td>2010</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          
             <!-- Environment Domain -->
             <div id="Environment" class="domain-content">
               <h3 >Environment</h3>
@@ -448,6 +474,7 @@
             <label for="domainFilter">Filter by Domain:</label>
             <select id="domainFilter" class="form-control" style="width: 300px; max-width: 100%; margin-bottom: 20px;">
               <option value="all">Show All</option>
+              <option value="Administrative">Administrative</option>
               <option value="Environment">Environment</option>
               <option value="Economy">Economy</option>
               <option value="Housing">Housing</option>
@@ -469,64 +496,64 @@
                 </tr>
               </thead>
               <tbody>
-                <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>a1_fips_2010</td>
                   <td>float64</td>
                   <td>Fips code for 2010</td>
                 </tr>
-                 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                 <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>a1_stname</td>
                   <td>object</td>
                   <td>State name</td>
                 </tr>
-                 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                 <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>a1_ctyname</td>
                   <td>object</td>
                   <td>County name</td>
                 </tr>
-                 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                 <tr data-domain="Power">
+                  <td><a href="#" onclick="goToDomainSection('Power')">Economic and Employment</a></td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>p2_total_pop</td>
                   <td>int64</td>
                   <td>Population count of all ages</td>
                 </tr>
-                <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                <tr data-domain="Power">
+                  <td><a href="#" onclick="goToDomainSection('Power')">Economic and Employment</a></td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>p2_total_jail_pop</td>
                   <td>float64</td>
                   <td>Total jail population count:  Annual Survey of Jails /Census of Jails</td>
                 </tr>
-                 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                 <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_fips_2010</td>
                   <td>int64</td>
                   <td>Fips code for 2010</td>
                 </tr>
-                  <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_stname</td>
                   <td>object</td>
                   <td>State name</td>
                 </tr>
-                <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                <tr data-domain="Administrative">
+                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_ctyname</td>
