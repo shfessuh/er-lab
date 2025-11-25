@@ -10,7 +10,7 @@ body {
 aside#colorlib-aside {
   width: 350px;
   background: #82a9a8;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   border-right: 1px solid #ddd;
 }
 .author-img {
