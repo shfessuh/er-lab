@@ -22,9 +22,7 @@
           <nav id="colorlib-main-menu" role="navigation">
             <ul>
               <li class="nav-link active" data-tab="about"><a href="#">About</a></li>
-              <li class="nav-link" data-tab="domains"><a href="#">Domains</a></li>
-              <li class="nav-link" data-tab="dataprep"><a href="#">Data Prep</a></li>
-              <li class="nav-link" data-tab="repos"><a href="#">Repos</a></li>
+              <li class="nav-link" data-tab="datasets"><a href="#">Datasets</a></li>
               <li class="nav-link" data-tab="codebook"><a href="#">Codebook</a></li>
               <li class="nav-link" data-tab="contact"><a href="#">Contact</a></li>
             </ul>
@@ -37,11 +35,11 @@
             <h2 class="section-header">About</h2>
             <p class="section-p">Racial and ethnic disparities in maternal and child health are driven by upstream structural conditions such as housing, education, labor markets, infrastructure, and governance.</p>
           </section>
-
-          <!-- Domains Tab-->
-          <section id="domains" class="tab-section">
-            <h2 class="section-header">Domains</h2>
-            <p class="section-p"><em>This framework groups key structural drivers into domains that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
+      <div class="datasetspage">
+       <!-- Domains Tab-->
+          <section id="datasets" class="tab-section">
+            <h2 class="section-header">Datasets</h2>
+            <p class="section-p"><em>This framework groups key structural drivers into datasets that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
             <div class="domain-tabs">
                <button class="btn btn-default domain-tab" data-domain="Administrative">Administrative</button>
               <button class="btn btn-default domain-tab" data-domain="Environment">Environment</button>
@@ -62,7 +60,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -71,7 +69,8 @@
                   <tr>
                     <td>a1</td>
                     <td>FIPS Codes</td>
-                    <td><a href="https://github.com/vera-institute/incarceration-trends?tab=readme-ov-file" target="_blank">Vera Institute Incarceration Trends</a></td>
+                    <td><a href="#" onclick = "showMetaData('vera'); return false;">
+                    Vera Institute Incarceration Trends</a></td>
                     <td>2010</td>
                   </tr>
                 </tbody>
@@ -87,7 +86,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -96,25 +95,25 @@
                   <tr>
                     <td>en1</td>
                     <td>Pollutants</td>
-                    <td><a href="https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei" target="_blank">EPA National Emissions Inventory</a></td>
+                    <td><a href="#" onclick="showMetaData('epa'); return false;">EPA National Emissions Inventory</a></td>
                     <td>2017</td>
                   </tr>
                   <tr>
                     <td>en2</td>
                     <td>Traffic</td>
-                    <td><a href="https://www.openicpsr.org/openicpsr/project/160261/version/V1/view" target ="_blank">NANDA Traffic Volume</a></td>
+                    <td><a href = "#" onclick = "showMetaData('nanda_traffic_volume'); return false;">NANDA Traffic Volume</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en3</td>
                     <td>Toxic Release Sites</td>
-                    <td><a href="https://www.epa.gov/toxics-release-inventory-tri-program" target ="_blank">EPA Toxic Release Inventory Sites</a></td>
+                    <td><a href="#" onclick="showMetaData('epa_toxic_release_inventory'); return false;">EPA Toxic Release Inventory Sites</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en4</td>
                     <td>Water</td>
-                    <td><a href="https://www.epa.gov/ground-water-and-drinking-water/safe-drinking-water-information-system-sdwis-federal-reporting" target ="_blank">Safe Drinking Water Inventory System</a></td>
+                    <td><a href="#" onclick="showMetaData('epa_safe_drinking_water_inventory'); return false;">Safe Drinking Water Inventory System</a></td>
                     <td>1994-2023</td>
                   </tr>
                   <tr>
@@ -154,7 +153,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -245,7 +244,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -352,7 +351,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -381,8 +380,8 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Code</th>
-                    <th>Subcategory</th>
+                   <th>Code</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -418,7 +417,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -433,6 +432,32 @@
                 </tbody>
               </table>
             </div>
+        </div>  
+          </section>
+      <!-- Meta Data Page-->
+          <section id="vera" class ="metadata" style="display:none;">
+                <h2>Vera Institute Incarceration Trends</h2>
+                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa" class ="metadata" style="display:none;">
+                <h2>EPA National Emissions Inventory</h2>
+                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="nanda_traffic_volume" class ="metadata" style="display:none;">
+                <h2>NANDA Traffic Volume</h2>
+                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa_toxic_release_inventory" class ="metadata" style="display:none;">
+                <h2>EPA Toxic Release Inventory Sites</h2>
+                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa_safe_drinking_water_inventory" class ="metadata" style="display:none;">
+                <h2>EPA Safe Drinking Water Inventory System</h2>
+                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
         <!-- Data Prep -->
           <section id="dataprep" class="tab-section">
@@ -462,12 +487,7 @@
             </div>
           </section>
 
-          <!-- Repos -->
-          <section id="repos" class="tab-section">
-            <h2 class="section-header">Repositories</h2>
-            <p class="section-p">Links to cleaned data and codebase used in this project.</p>
-          </section>
-
+         
           <!-- Codebook Tab-->
           <section id="codebook" class="tab-section">
             <h2 class="section-header">Codebook</h2>
@@ -1645,986 +1665,7 @@
         <td>County name</td>
         </tr>
 
-      
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_FIPS_2010</td>
-        <td>int64</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_STNAME</td>
-        <td>str</td>
-        <td>State Name</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_CTYNAME</td>
-        <td>byte</td>
-        <td>County Name</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_all_school</td>
-        <td>byte</td>
-        <td>Total schools (public & private, all grade levels) in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_elem</td>
-        <td>byte</td>
-        <td>Elementary schools (lowest grade < 5) in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_middle</td>
-        <td>byte</td>
-        <td>Middle schools (highest grade > 6, lowest grade < 8) in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_high</td>
-        <td>byte</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_public_school</td>
-        <td>byte</td>
-        <td>High schools (highest grade > 9) in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_public_trad</td>
-        <td>byte</td>
-        <td>Total public schools (traditional public, charter & magnet) in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_public_charter</td>
-        <td>byte</td>
-        <td>Charter schools in tract</td>        
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_public_magnet</td>
-        <td>byte</td>
-        <td>Magnet schools in tract</td>
-        </tr>
-<tr data-domain="Education">
-        <td><a href="#" onclick="goToDomainSection('Education')">Schools and Schooling Resources</a></td>
-        <td>Schools per capita, Revenue, & Spending</td>
-        <td>NaNDA (2000-2018) from National Center for Education Statistics Common Core Data</td> 
-        <td>ed4_private_school</td>
-        <td>byte</td>
-        <td>Total private schools in tract</td>  
-        </tr>
 
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_FIPS_2010</td>
-        <td>float64</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_STNAME</td>
-        <td>object</td>
-        <td>State name</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_countyname</td>
-        <td>object</td>
-        <td>County name</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_0</td>
-        <td>int64</td>
-        <td>Fair Market Rent for an Efficiency</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_1</td>
-        <td>int64</td>
-        <td>Fair Market Rent for a 1-bedroom unit</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_2</td>
-        <td>int64</td>
-        <td>Fair Market Rent for a 2-bedroom unit</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_3</td>
-        <td>int64</td>
-        <td>Fair Market Rent for a 3-bedroom unit</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_4</td>
-        <td>int64</td>
-        <td>Fair Market Rent for a 4-bedroom unit</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_pop2010</td>
-        <td>float64</td>
-        <td>2010 Census population</td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Economic and Employment</a></td>
-        <td>Fair Market Rent</td>
-        <td>HUD Fair Market Rent (2000-2025)</td>
-        <td>ho7_fmr_type</td>
-        <td>int64</td>
-        <td>40th/50th percentile indicator</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Economic and Employment</a></td>
-        <td>USA Spending</td>
-        <td>Custom Award Data</td>
-        <td>ec9_FIPS_2010</td>
-        <td>int64</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Economic and Employment</a></td>
-        <td>USA Spending</td>
-        <td>Custom Award Data</td>
-        <td>ec9_State</td>
-        <td>object</td>
-        <td>State name</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Economic and Employment</a></td>
-        <td>USA Spending</td>
-        <td>Custom Award Data</td>
-        <td>ec9_CTYNAME</td>
-        <td>object</td>
-        <td>County name</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Economic and Employment</a></td>
-        <td>USA Spending</td>
-        <td>Custom Award Data</td>
-        <td>ec9_Total_Prime_Award</td>
-        <td>float64</td>
-        <td>Total prime award count</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Economic and Employment</a></td>
-        <td>USA Spending</td>
-        <td>Custom Award Data</td>
-        <td>ec9_Total_Sub_Award</td>
-        <td>float64</td>
-        <td>Total subaward count</td>
-        </tr>
-
-        <tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_totpop</td>
-        <td>float</td>
-        <td>Total population</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_count_postoffices</td>
-        <td>float</td>
-        <td>Total counts: Post Offices</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_den_postoffices</td>
-        <td>float</td>
-        <td>Post Offices per 1000 people</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_aden_postoffices</td>
-        <td>float</td>
-        <td>Post Offices per sq mile</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_count_banks</td>
-        <td>float</td>
-        <td>Total counts: Banks</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_den_banks</td>
-        <td>float</td>
-        <td>Banks per 1000 people</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_aden_banks</td>
-        <td>float</td>
-        <td>Banks per sq mile</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_count_creditunions</td>
-        <td>float</td>
-        <td>Total counts: Credit Unions</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_den_creditunions</td>
-        <td>float</td>
-        <td>Credit Unions per 1000 people</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_aden_creditunions</td>
-        <td>float</td>
-        <td>Credit Unions per sq mile</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_FIPS_2010</td>
-        <td>int64</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_STNAME</td>
-        <td>str</td>
-        <td>State name</td>
-        </tr>
-<tr data-domain="Economics">
-        <td><a href="#" onclick="goToDomainSection('Economics')">Business and Retail</a></td>
-        <td>Number of post offices; banks</td>
-        <td>NaNDA (2000-2018) from National Establishment Time Series database</td>
-        <td>ec1_CTYNAME</td>
-        <td>str</td>
-        <td>County name</td>
-        </tr>
-
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_totpop</td>
-        <td>float</td>
-        <td>Total population</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_allphysicians</td>
-        <td>float</td>
-        <td>Total counts: All offices or clinics of physicians</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_allphysicians</td>
-        <td>float</td>
-        <td>Offices or clinics of physicians per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_allphysicians</td>
-        <td>float</td>
-        <td>Offices or clinics of physicians per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_physicalhealthphys</td>
-        <td>float</td>
-        <td>Total counts: Offices or clinics of physicians (except mental health)</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_physicalhealthphys</td>
-        <td>float</td>
-        <td>Offices or clinics of physicians (except mental health) per 1000</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_physicalhealthphys</td>
-        <td>float</td>
-        <td>Offices or clinics of physicians (except mental health) per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_mentalhealthphys</td>
-        <td>float</td>
-        <td>Total counts: Offices or clinics of mental health physicians</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_mentalhealthphys</td>
-        <td>float</td>
-        <td>Offices or clinics of mental health physicians per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_mentalhealthphys</td>
-        <td>float</td>
-        <td>Offices or clinics of mental health physicians per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_allhealthpractitioners</td>
-        <td>float</td>
-        <td>Total counts: All offices or clinics of health practitioners</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_allhealthpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of health practitioners per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_allhealthpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of health practitioners per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_mentalhealthpractitioners</td>
-        <td>float</td>
-        <td>Total counts: Offices or clinics of mental health practitioners (non-MD)</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_mentalhealthpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of mental health practitioners per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_mentalhealthpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of mental health practitioners per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_rehabpractitioners</td>
-        <td>float</td>
-        <td>Total counts: Offices or clinics of rehabilitation health practitioners and podiatrists</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_rehabpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of rehab practitioners per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_rehabpractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of rehab practitioners per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_altmedicinepractitioners</td>
-        <td>float</td>
-        <td>Total counts: Offices or clinics of complementary and alternative medicine</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_altmedicinepractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of complementary and alternative medicine per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_altmedicinepractitioners</td>
-        <td>float</td>
-        <td>Offices or clinics of complementary and alternative medicine per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_chiropractors</td>
-        <td>float</td>
-        <td>Total counts: Offices and clinics of chiropractors</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_chiropractors</td>
-        <td>float</td>
-        <td>Chiropractors per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_chiropractors</td>
-        <td>float</td>
-        <td>Chiropractors per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_optometrists</td>
-        <td>float</td>
-        <td>Total counts: Optometrists</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_optometrists</td>
-        <td>float</td>
-        <td>Optometrists per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_optometrists</td>
-        <td>float</td>
-        <td>Optometrists per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_dentists</td>
-        <td>float</td>
-        <td>Total counts: Dentists</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_dentists</td>
-        <td>float</td>
-        <td>Dentists per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_dentists</td>
-        <td>float</td>
-        <td>Dentists per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_outpatientclinics</td>
-        <td>float</td>
-        <td>Total counts: All outpatient medical clinics including Urgent Care and HMO</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_outpatientclinics</td>
-        <td>float</td>
-        <td>Outpatient medical clinics per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_outpatientclinics</td>
-        <td>float</td>
-        <td>Outpatient medical clinics per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_physicaltherapyclinics</td>
-        <td>float</td>
-        <td>Total counts: Outpatient physical medicine and rehabilitation treatment centers</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_physicaltherapyclinics</td>
-        <td>float</td>
-        <td>Physical therapy clinics per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_physicaltherapyclinics</td>
-        <td>float</td>
-        <td>Physical therapy clinics per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_mentalhealthclinics</td>
-        <td>float</td>
-        <td>Total counts: Outpatient mental health clinics and substance abuse clinics</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_mentalhealthclinics</td>
-        <td>float</td>
-        <td>Mental health clinics per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_mentalhealthclinics</td>
-        <td>float</td>
-        <td>Mental health clinics per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_homehealth</td>
-        <td>float</td>
-        <td>Total counts: Home health services</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_homehealth</td>
-        <td>float</td>
-        <td>Home health services per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_homehealth</td>
-        <td>float</td>
-        <td>Home health services per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_pharmacies</td>
-        <td>float</td>
-        <td>Total counts: Retail pharmacies and drug stores</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_pharmacies</td>
-        <td>float</td>
-        <td>Retail pharmacies per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_pharmacies</td>
-        <td>float</td>
-        <td>Retail pharmacies per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_opticalgoods</td>
-        <td>float</td>
-        <td>Total counts: Optical goods stores</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_opticalgoods</td>
-        <td>float</td>
-        <td>Optical goods stores per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_opticalgoods</td>
-        <td>float</td>
-        <td>Optical goods stores per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_medequipment</td>
-        <td>float</td>
-        <td>Total counts: Medical equipment stores and suppliers</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_medequipment</td>
-        <td>float</td>
-        <td>Medical equipment stores per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_medequipment</td>
-        <td>float</td>
-        <td>Medical equipment stores per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_allrescarefacilities</td>
-        <td>float</td>
-        <td>Total counts: All residential care facilities</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_allrescarefacilities</td>
-        <td>float</td>
-        <td>Residential care facilities per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_allrescarefacilities</td>
-        <td>float</td>
-        <td>Residential care facilities per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_resnursingfacilities</td>
-        <td>float</td>
-        <td>Total counts: Residential nursing facilities (e.g., nursing homes)</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_resnursingfacilities</td>
-        <td>float</td>
-        <td>Residential nursing facilities per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_resnursingfacilities</td>
-        <td>float</td>
-        <td>Residential nursing facilities per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_count_otherresidentialcare</td>
-        <td>float</td>
-        <td>Total counts: Other residential care</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_den_otherresidentialcare</td>
-        <td>float</td>
-        <td>Other residential care per 1000 people</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_aden_otherresidentialcare</td>
-        <td>float</td>
-        <td>Other residential care per sq mile</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_FIPS_2010</td>
-        <td>int64</td>
-        <td>Fips code for 2010</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_STNAME</td>
-        <td>str</td>
-        <td>State name</td>
-        </tr>
-<tr data-domain="Health Resources">
-        <td><a href="#" onclick="goToDomainSection('HealthResources')">Health Resources</a></td>
-        <td>Healthcare</td>
-        <td>NaNDA from HRSA Area Health Resource Files and Universal Data System</td>
-        <td>he1_CTYNAME</td>
-        <td>str</td>
-        <td>County name</td>
-        </tr>
-
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_ORIGINATIONS</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_ORIGINATIONS</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_CONVENTIONAL</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_CONVENTIONAL</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_GOVERNMENT</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_GOVERNMENT</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_FHA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_FHA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_VA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_VA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_RHS_FSA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_RHS_FSA</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_HOME_PURCHASE</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_HOME_PURCHASE</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_HOME_IMPROVEMENT</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_HOME_IMPROVEMENT</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_NUM_REFINANCE</td>
-        <td>int64</td>
-        <td></td>
-        </tr>
-<tr data-domain="Housing">
-        <td><a href="#" onclick="goToDomainSection('Housing')">Housing</a></td>
-        <td>Mortgage Lending</td>
-        <td>NaNDA (1981-2024) Home Mortgage Disclosure Act</td>
-        <td>ho2_AMT_REFINANCE</td>
-        <td>int64</td>
-        <td></td>
 
               </tbody>
             </table>
@@ -2700,6 +1741,24 @@
           document.getElementById('codebook').scrollIntoView({ behavior: 'smooth' });
         }, 200);
       }
+      function showMetaData(datasetsId){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'none';
+        
+        const page = document.getElementById(datasetsId);
+        if (page) page.style.display = 'block';
+      }
+
+      function hideMetaData(){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'block';
+      }
+      
+
+  
+
+  
+
 
       function goToDomainSection(domain) {
         document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
@@ -2722,6 +1781,8 @@
           }, 100);
         }
       }
+
+
     </script>
 
   </body>
