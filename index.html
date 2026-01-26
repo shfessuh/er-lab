@@ -21,12 +21,10 @@
           </div>
           <nav id="colorlib-main-menu" role="navigation">
             <ul>
-              <li class="nav-link active" data-tab="about"><a href="#">About</a></li>
-              <li class="nav-link" data-tab="domains"><a href="#">Domains</a></li>
-              <li class="nav-link" data-tab="dataprep"><a href="#">Data Prep</a></li>
-              <li class="nav-link" data-tab="repos"><a href="#">Repos</a></li>
-              <li class="nav-link" data-tab="codebook"><a href="#">Codebook</a></li>
-              <li class="nav-link" data-tab="contact"><a href="#">Contact</a></li>
+              <li class="nav-link active" data-tab="about" onclick="hideMetaData()"><a href="#">About</a></li>
+              <li class="nav-link" data-tab="datasets" onclick="hideMetaData()"><a href="#">Datasets</a></li>
+              <li class="nav-link" data-tab="codebook" onclick="hideMetaData()"><a href="#">Codebook</a></li>
+              <li class="nav-link" data-tab="contact" onclick = "hideMetaData()"><a href="#">Contact</a></li>
             </ul>
           </nav>
         </aside>
@@ -37,11 +35,11 @@
             <h2 class="section-header">About</h2>
             <p class="section-p">Racial and ethnic disparities in maternal and child health are driven by upstream structural conditions such as housing, education, labor markets, infrastructure, and governance.</p>
           </section>
-
-          <!-- Domains Tab-->
-          <section id="domains" class="tab-section">
-            <h2 class="section-header">Domains</h2>
-            <p class="section-p"><em>This framework groups key structural drivers into domains that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
+      <div class="datasetspage">
+       <!-- Domains Tab-->
+          <section id="datasets" class="tab-section">
+            <h2 class="section-header">Datasets</h2>
+            <p class="section-p"><em>This framework groups key structural drivers into datasets that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
             <div class="domain-tabs">
                <button class="btn btn-default domain-tab" data-domain="Administrative">Administrative</button>
               <button class="btn btn-default domain-tab" data-domain="Environment">Environment</button>
@@ -62,7 +60,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -71,7 +69,8 @@
                   <tr>
                     <td>a1</td>
                     <td>FIPS Codes</td>
-                    <td><a href="https://github.com/vera-institute/incarceration-trends?tab=readme-ov-file" target="_blank">Vera Institute Incarceration Trends</a></td>
+                    <td><a href="#" onclick = "showMetaData('vera'); return false;">
+                    Vera Institute Incarceration Trends</a></td>
                     <td>2010</td>
                   </tr>
                 </tbody>
@@ -87,7 +86,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -96,31 +95,31 @@
                   <tr>
                     <td>en1</td>
                     <td>Pollutants</td>
-                    <td><a href="https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei" target="_blank">EPA National Emissions Inventory</a></td>
+                    <td><a href="#" onclick="showMetaData('epa'); return false;">EPA National Emissions Inventory</a></td>
                     <td>2017</td>
                   </tr>
                   <tr>
                     <td>en2</td>
                     <td>Traffic</td>
-                    <td><a href="https://www.openicpsr.org/openicpsr/project/160261/version/V1/view" target ="_blank">NANDA Traffic Volume</a></td>
+                    <td><a href = "#" onclick = "showMetaData('nanda_traffic_volume'); return false;">NANDA Traffic Volume</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en3</td>
                     <td>Toxic Release Sites</td>
-                    <td><a href="https://www.epa.gov/toxics-release-inventory-tri-program" target ="_blank">EPA Toxic Release Inventory Sites</a></td>
+                    <td><a href="#" onclick="showMetaData('epa_toxic_release_inventory'); return false;">EPA Toxic Release Inventory Sites</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en4</td>
                     <td>Water</td>
-                    <td><a href="https://www.epa.gov/ground-water-and-drinking-water/safe-drinking-water-information-system-sdwis-federal-reporting" target ="_blank">Safe Drinking Water Inventory System</a></td>
+                    <td><a href="#" onclick="showMetaData('epa_safe_drinking_water_inventory'); return false;">Safe Drinking Water Inventory System</a></td>
                     <td>1994-2023</td>
                   </tr>
                   <tr>
                     <td>en5</td>
                     <td>Internet Access</td>
-                    <td><a href="https://www.icpsr.umich.edu/web/ICPSR/studies/38559/versions/V1" target="_blank">NaNDA from Federal Communications Commission</a></td>
+                    <td><a href="#" onclick = "showMetaData('nanda_fcc'); return false;">NaNDA from Federal Communications Commission</a></td>
                     <td>2000-2018</td>
                   </tr>
                   <tr>
@@ -154,7 +153,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -245,7 +244,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -352,7 +351,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -381,8 +380,8 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Code</th>
-                    <th>Subcategory</th>
+                   <th>Code</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -418,7 +417,7 @@
                 <thead>
                   <tr>
                     <th>Code</th>
-                    <th>Subcategory</th>
+                    <th>Subdomain</th>
                     <th>Dataset</th>
                     <th>Description</th>
                   </tr>
@@ -433,6 +432,37 @@
                 </tbody>
               </table>
             </div>
+        </div>  
+          </section>
+      <!-- Meta Data Page-->
+          <section id="vera" class ="metadata" style="display:none;">
+                <h2>Vera Institute Incarceration Trends</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="nanda_fcc" class ="metadata" style="display:none;">
+                <h2>NaNDA from Federal Communications Commission</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa" class ="metadata" style="display:none;">
+                <h2>EPA National Emissions Inventory</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="nanda_traffic_volume" class ="metadata" style="display:none;">
+                <h2>NANDA Traffic Volume</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa_toxic_release_inventory" class ="metadata" style="display:none;">
+                <h2>EPA Toxic Release Inventory Sites</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="epa_safe_drinking_water_inventory" class ="metadata" style="display:none;">
+                <h2>EPA Safe Drinking Water Inventory System</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
         <!-- Data Prep -->
           <section id="dataprep" class="tab-section">
@@ -462,12 +492,7 @@
             </div>
           </section>
 
-          <!-- Repos -->
-          <section id="repos" class="tab-section">
-            <h2 class="section-header">Repositories</h2>
-            <p class="section-p">Links to cleaned data and codebase used in this project.</p>
-          </section>
-
+         
           <!-- Codebook Tab-->
           <section id="codebook" class="tab-section">
             <h2 class="section-header">Codebook</h2>
@@ -1721,6 +1746,24 @@
           document.getElementById('codebook').scrollIntoView({ behavior: 'smooth' });
         }, 200);
       }
+      function showMetaData(datasetsId){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'none';
+        
+        const page = document.getElementById(datasetsId);
+        if (page) page.style.display = 'block';
+      }
+
+      function hideMetaData(){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'block';
+      }
+      
+
+  
+
+  
+
 
       function goToDomainSection(domain) {
         document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
@@ -1743,6 +1786,8 @@
           }, 100);
         }
       }
+
+
     </script>
 
   </body>

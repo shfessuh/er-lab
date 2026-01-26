@@ -10,7 +10,7 @@ body {
 aside#colorlib-aside {
   width: 350px;
   background: #82a9a8;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   border-right: 1px solid #ddd;
 }
 .author-img {
@@ -27,7 +27,7 @@ aside#colorlib-aside {
   text-decoration: none;
   text-align: center;
   color: #ffffff;
-  background-color: #f3816a;
+  background-color: #fe7156;
   padding: 15px 70px 15px 70px;
   display: inline-block;  margin-bottom: 30px;
   border-radius: 4px;
@@ -59,7 +59,7 @@ nav ul li a {
 }
 nav ul li.active a {
   color: #ffffff;
-  border-left: 4px solid #f3816a;
+  border-left: 4px solid #fe7156;
   padding-left: 4px;
   text-decoration: none;
   background-color: #156a69;
