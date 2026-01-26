@@ -21,10 +21,10 @@
           </div>
           <nav id="colorlib-main-menu" role="navigation">
             <ul>
-              <li class="nav-link active" data-tab="about"><a href="#">About</a></li>
-              <li class="nav-link" data-tab="datasets"><a href="#">Datasets</a></li>
-              <li class="nav-link" data-tab="codebook"><a href="#">Codebook</a></li>
-              <li class="nav-link" data-tab="contact"><a href="#">Contact</a></li>
+              <li class="nav-link active" data-tab="about" onclick="hideMetaData(document.querySelectorAll('.metadata'))"><a href="#">About</a></li>
+              <li class="nav-link" data-tab="datasets" onclick="hideMetaData(document.querySelectorAll('.metadata'))"><a href="#">Datasets</a></li>
+              <li class="nav-link" data-tab="codebook" onclick="hideMetaData(document.querySelectorAll('.metadata'))"><a href="#">Codebook</a></li>
+              <li class="nav-link" data-tab="contact" onclick = "hideMetaData(document.querySelectorAll('.metadata'))"><a href="#">Contact</a></li>
             </ul>
           </nav>
         </aside>
@@ -119,7 +119,7 @@
                   <tr>
                     <td>en5</td>
                     <td>Internet Access</td>
-                    <td><a href="https://www.icpsr.umich.edu/web/ICPSR/studies/38559/versions/V1" target="_blank">NaNDA from Federal Communications Commission</a></td>
+                    <td><a href="#" onclick = "showMetaData('nanda_fcc'); return false;">NaNDA from Federal Communications Commission</a></td>
                     <td>2000-2018</td>
                   </tr>
                   <tr>
@@ -437,27 +437,32 @@
       <!-- Meta Data Page-->
           <section id="vera" class ="metadata" style="display:none;">
                 <h2>Vera Institute Incarceration Trends</h2>
-                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
+          </section>
+
+          <section id="nanda_fcc" class ="metadata" style="display:none;">
+                <h2>NaNDA from Federal Communications Commission</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
 
           <section id="epa" class ="metadata" style="display:none;">
                 <h2>EPA National Emissions Inventory</h2>
-                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
 
           <section id="nanda_traffic_volume" class ="metadata" style="display:none;">
                 <h2>NANDA Traffic Volume</h2>
-                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
 
           <section id="epa_toxic_release_inventory" class ="metadata" style="display:none;">
                 <h2>EPA Toxic Release Inventory Sites</h2>
-                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
 
           <section id="epa_safe_drinking_water_inventory" class ="metadata" style="display:none;">
                 <h2>EPA Safe Drinking Water Inventory System</h2>
-                <button class="btn btn-default" onclick="hideMetaData(); return false;">Back to Datasets</button>
+                <button class="metadata_back" onclick="hideMetaData(); return false;">Back to Datasets</button>
           </section>
         <!-- Data Prep -->
           <section id="dataprep" class="tab-section">
