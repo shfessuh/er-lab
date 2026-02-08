@@ -198,21 +198,31 @@ table#codebookTable tbody tr:hover{
 }
 
 .metadata_header{
-  text-align: center;
   font-size: 27px;
   color:#156a69;
   font-weight: bold;
   margin: 0;
   padding: 0;
   letter-spacing: 2px;
-}
+  margin: 0 auto;
+  text-align: center;
+  transform: translateX(-12%);
 
+}
 .metadata_back{
 color:#156a69;
 background-color: transparent;
 border: 0px solid transparent;
 font-size: 30px;
 font-weight: bold;
-transform: translateX(-100%);
+margin-right: auto;
+}
 
+.metadata_banner_buttons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  justify-content: center;
 }
