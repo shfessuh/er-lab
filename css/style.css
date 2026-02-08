@@ -22,7 +22,7 @@ aside#colorlib-aside {
 }
 #colorlib-logo a {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -40,7 +40,6 @@ aside#colorlib-aside {
   overflow-y: auto;
 }
 
-
 nav ul {
   list-style: none;
   padding: 0;
@@ -51,7 +50,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #156a69;
-  font-weight: bold;
+  font-weight: 650;
   font-size: 18px;
   display: block;
   padding: 8px;
@@ -133,16 +132,7 @@ nav#colorlib-main-menu li.nav-link:hover a{
 nav#colorlib-main-menu li.nav-link:hover::before{
   width: 100%;
 }
-h2.section-header{
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeLEFT 1.5s forwards;
-}
-p.section-p{
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeLEFT 1s forwards;
-}
+
 
 @keyframes fadeLEFT{
   from{
@@ -178,4 +168,51 @@ table#codebookTable td{
 
 table#codebookTable tbody tr:hover{
   box-shadow: 0px 0px 4px #156a69;
+}
+
+.section-header{
+  text-align: center;
+  font-size: 27px;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
+.section_banner{
+  background-color:#156a69;
+  padding: 16px;
+  margin: -45px -45px 30px -45px;  
+}
+
+#about .section-subheader{
+  color:#156a69;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.metadata_banner{
+  background-color:#82a9a8;
+  padding: 16px;
+  margin: -45px -45px 30px -45px;  
+}
+
+.metadata_header{
+  text-align: center;
+  font-size: 27px;
+  color:#156a69;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
+
+.metadata_back{
+color:#156a69;
+background-color: transparent;
+border: 0px solid transparent;
+font-size: 30px;
+font-weight: bold;
+transform: translateX(-100%);
+
 }
