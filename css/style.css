@@ -79,6 +79,33 @@ nav ul li.active a {
 }
 .domain-tabs button {
   margin-right: 8px;
+  background-color:#82a9a8;
+  color:#156a69;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 650;
+  font-size: 13px;
+  border-radius: 0px;
+}
+
+
+.domain-tabs button:hover, .domain-tabs button:focus{
+  background-color: #156a69;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 650;
+  font-size: 12px;
+  border-radius: 0px;
+  outline: none;
+}
+
+.domain-tabs button.active, .domain-tabs button.active:hover, .domain-tabs button.active:focus{
+  background-color: #156a69;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 650;
+  font-size: 12px;
+  border-radius: 0px;
+  outline: none;
 }
 
 *::before,
@@ -226,3 +253,5 @@ margin-right: auto;
   gap: 10px;
   justify-content: center;
 }
+
+

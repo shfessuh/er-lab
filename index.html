@@ -55,10 +55,10 @@
             <div class ="section_banner">
             <h2 class="section-header">Datasets</h2>
             </div>
-            <p class="section-p"><em>This framework groups key structural drivers into datasets that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</em></p>
+            <p class="section-p">This framework groups key structural drivers into datasets that help explain how racial and ethnic disparities in maternal and child health emerge and persist. Each domain contains publicly available datasets that measure conditions at the county level across the United States. These datasets reflect long-term patterns in exposure, access to resources, and public and private investment.</p>
             <div class="domain-tabs">
-               <button class="btn btn-default domain-tab" data-domain="Administrative">Administrative</button>
-              <button class="btn btn-default domain-tab" data-domain="Environment">Environment</button>
+              <button class="btn btn-default domain-tab active" data-domain="Administrative">Administrative</button>
+              <button class="btn btn-default domain-tab active" data-domain="Environment">Environment</button>
               <button class="btn btn-default domain-tab" data-domain="Economy">Economy</button>
               <button class="btn btn-default domain-tab" data-domain="Housing">Housing</button>
               <button class="btn btn-default domain-tab" data-domain="Education">Education</button>
@@ -68,9 +68,9 @@
             </div>
 
  <!-- Administrative Domain -->
-            <div id="Administrative" class="domain-content">
+            <div id="Administrative" class="domain-content active">
               <h3 >Administrative</h3>
-              <p><a href="#" onclick="filterCodebook('Administrative');" style="font-size:14px; text-decoration: underline;">Administrative Variables</a></p>
+              <p><a href="#" onclick="filterCodebook('Administrative');" style="font-size:14px; text-decoration: underline; display: block;">Administrative Variables</a></p>
               <p>This data collection focuses on (XYZ)</p>
               <table class="table table-striped">
                 <thead>
@@ -94,7 +94,7 @@
             </div>
           
             <!-- Environment Domain -->
-            <div id="Environment" class="domain-content">
+            <div id="Environment" class="domain-content active">
               <h3 >Environment</h3>
               <p><a href="#" onclick="filterCodebook('Environment');" style="font-size:14px; text-decoration: underline;">Environment Variables </a></p>
               <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
@@ -1766,10 +1766,13 @@
 
       document.querySelectorAll('.domain-tab').forEach(btn => {
         btn.addEventListener('click', function() {
-          document.querySelectorAll('.domain-tab').forEach(el => el.classList.remove('active'));
-          document.querySelectorAll('.domain-content').forEach(el => el.classList.remove('active'));
-          btn.classList.add('active');
-          document.getElementById(btn.dataset.domain).classList.add('active');
+          this.classList.toggle('active');
+
+          const target = document.getElementById(this.dataset.domain);
+          if (target){
+          target.classList.toggle('active');
+          }
+
         });
       });
 
