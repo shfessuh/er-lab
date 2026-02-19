@@ -69,9 +69,8 @@
 
  <!-- Administrative Domain -->
             <div id="Administrative" class="domain-content active">
-              <h3 >Administrative</h3>
-              <p><a href="#" onclick="filterCodebook('Administrative');" style="font-size:14px; text-decoration: underline; display: block;">Administrative Variables</a></p>
-              <p>This data collection focuses on (XYZ)</p>
+              <h3 class="domain-dataset-headers">Administrative</h3>
+              <!--<p>This data collection focuses on (XYZ)</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -82,10 +81,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr class="dataset-row">
                     <td>a1</td>
                     <td>FIPS Codes</td>
-                    <td><a href="#" onclick = "showMetaData('vera'); return false;">
+                    <td><a href="#" onclick = "showMetaData('vera'); return false;" class="metadatalink">
                     Vera Institute Incarceration Trends</a></td>
                     <td>2010</td>
                   </tr>
@@ -95,9 +94,8 @@
           
             <!-- Environment Domain -->
             <div id="Environment" class="domain-content active">
-              <h3 >Environment</h3>
-              <p><a href="#" onclick="filterCodebook('Environment');" style="font-size:14px; text-decoration: underline;">Environment Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Environment</h3>
+              <!---<p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -111,49 +109,49 @@
                   <tr>
                     <td>en1</td>
                     <td>Pollutants</td>
-                    <td><a href="#" onclick="showMetaData('epa'); return false;">EPA National Emissions Inventory</a></td>
+                    <td><a href="#" class="metadatalink" onclick="showMetaData('epa'); return false;">EPA National Emissions Inventory</a></td>
                     <td>2017</td>
                   </tr>
                   <tr>
                     <td>en2</td>
                     <td>Traffic</td>
-                    <td><a href = "#" onclick = "showMetaData('nanda_traffic_volume'); return false;">NANDA Traffic Volume</a></td>
+                    <td><a href = "#" class="metadatalink" onclick = "showMetaData('nanda_traffic_volume'); return false;">NANDA Traffic Volume</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en3</td>
                     <td>Toxic Release Sites</td>
-                    <td><a href="#" onclick="showMetaData('epa_toxic_release_inventory'); return false;">EPA Toxic Release Inventory Sites</a></td>
+                    <td><a href="#" class="metadatalink" onclick="showMetaData('epa_toxic_release_inventory'); return false;">EPA Toxic Release Inventory Sites</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en4</td>
                     <td>Water</td>
-                    <td><a href="#" onclick="showMetaData('epa_safe_drinking_water_inventory'); return false;">Safe Drinking Water Inventory System</a></td>
+                    <td><a href="#" class="metadatalink" onclick="showMetaData('epa_safe_drinking_water_inventory'); return false;">Safe Drinking Water Inventory System</a></td>
                     <td>1994-2023</td>
                   </tr>
                   <tr>
                     <td>en5</td>
                     <td>Internet Access</td>
-                    <td><a href="#" onclick = "showMetaData('nanda_fcc'); return false;">NaNDA from Federal Communications Commission</a></td>
+                    <td><a href="#" class="metadatalink" onclick = "showMetaData('nanda_fcc'); return false;">NaNDA from Federal Communications Commission</a></td>
                     <td>2000-2018</td>
                   </tr>
                   <tr>
                     <td>en6</td>
                     <td>Land Use</td>
-                    <td><a href="#" onclick="showMetaData('nanda_nat_land'); return false;">NaNDA National Land Cover Database</a></td>
+                    <td><a href="#" class="metadatalink" onclick="showMetaData('nanda_nat_land'); return false;">NaNDA National Land Cover Database</a></td>
                     <td>2000-2016</td>
                   </tr>
                   <tr>
                     <td>en7</td>
                     <td>Energy Expenses</td>
-                    <td><a href="#" onclick = "showMetaData('low_income_afforad'); return false;">Low Income Energy Affordability Data</a></td>
+                    <td><a href="#" class="metadatalink" onclick = "showMetaData('low_income_afforad'); return false;">Low Income Energy Affordability Data</a></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td>en8</td>
                     <td>Transit</td>
-                    <td><a href="https://www.openicpsr.org/openicpsr/project/111109/version/V1/view" target="_blank">NaNDA from National Transit Map</a></td>
+                    <td><a href="https://www.openicpsr.org/openicpsr/project/111109/version/V1/view" target="_blank" class="metadatalink">NaNDA from National Transit Map</a></td>
                     <td></td>
                   </tr>
 
@@ -162,9 +160,8 @@
             </div>
             <!-- Economy Domain-->
             <div id="Economy" class="domain-content">
-              <h3>Economy</h3>
-              <p><a href="#" onclick="filterCodebook('Economy');" style="font-size:14px; text-decoration: underline;">Economy Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Economy</h3>
+              <!--<p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -253,9 +250,8 @@
             </div>
             <!-- Housing Domain -->
             <div id="Housing" class="domain-content">
-              <h3>Housing</h3>
-              <p><a href="#" onclick="filterCodebook('Housing');" style="font-size:14px; text-decoration: underline;">Housing Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Housing</h3>
+              <!---<p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -313,9 +309,8 @@
             </div>
             <!-- Education Domain -->
             <div id="Education" class="domain-content">
-              <h3>Education</h3>
-              <p><a href="#" onclick="filterCodebook('Education');" style="font-size:14px; text-decoration: underline;">Education Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Education</h3>
+              <!--<p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -360,9 +355,9 @@
             </div>
             <!-- Work Domain -->
             <div id="Work" class="domain-content">
-              <h3>Work</h3>
-              <p><a href="#" onclick="filterCodebook('Work');" style="font-size:14px; text-decoration: underline;">Work Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Work</h3>
+              
+              <!--p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -390,9 +385,8 @@
             </div>
             <!-- Power Domain -->
             <div id="Power" class="domain-content">
-              <h3>Power</h3>
-              <p><a href="#" onclick="filterCodebook('Power');" style="font-size:14px; text-decoration: underline;">Power Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Power</h3>
+              <!--<p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -426,9 +420,8 @@
             </div>
             <!-- Health Resources Domain -->
             <div id="HealthResources" class="domain-content">
-              <h3>Health Resources</h3>
-              <p><a href="#" onclick="filterCodebook('Health Resources');" style="font-size:14px; text-decoration: underline;">Health Resources Variables </a></p>
-              <p>This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+              <h3 class="domain-dataset-headers">Health Resources</h3>
+              <!--pThis data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>-->
               <table class="table table-striped">
                 <thead>
                   <tr>

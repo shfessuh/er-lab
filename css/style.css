@@ -99,6 +99,13 @@ nav ul li.active a {
   outline: none;
 }
 
+.domain-dataset-headers{
+  font-size: 18px;
+  color: #156a69;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 
 *::before,
 *::after {
@@ -212,7 +219,7 @@ table#codebookTable tbody tr:hover{
 
 .metadata_banner{
   background-color:#82a9a8;
-  padding: 16px;
+  padding: 10px;
   margin: -45px -45px 30px -45px;  
 }
 
@@ -222,7 +229,6 @@ table#codebookTable tbody tr:hover{
   font-weight: bold;
   margin: 0;
   padding: 0;
-  letter-spacing: 2px;
   margin: 0 auto;
   text-align: center;
   transform: translateX(-12%);
@@ -246,4 +252,16 @@ margin-right: auto;
   justify-content: center;
 }
 
+.metadatalink{
+  color:#156a69;
+  text-decoration: underline;
+}
 
+.metadatalink{
+  color:#156a69;
+  text-decoration: none;
+}
+.metadatalink:hover{
+  color:#82a9a8;
+  text-decoration: underline;
+}
