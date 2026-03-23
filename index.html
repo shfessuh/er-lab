@@ -68,9 +68,7 @@
             </div>
 
  <!-- Administrative Domain -->
-            <div id="Administrative" class="domain-content active">
-              <h3 class="domain-dataset-headers">Administrative</h3>
-              <!--<p>This data collection focuses on (XYZ)</p>-->
+            <div id="Administrative" class="domain-content active">                <h3 class="domain-dataset-headers">Administrative</h3>
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -106,7 +104,7 @@
                     <td>a4</td>
                     <td>Area</td>
                     <td><a id="UCCG" href="#" onclick = "showMetaData('ucg'); return false;" class="metadatalink">
-                    US Census Gazeteer</a></td>
+                    US Census Gazetteer</a></td>
                     <td>This dataset contains the U.S. Census Gazetteer Files, which provide standardized geographic reference information for counties, places, and other geographic units across census years. Files include location identifiers, land and water area measures, and geographic coordinates to support spatial analysis and data linkage.</td>
                   </tr>
                 </tbody>
@@ -131,49 +129,49 @@
                     <td>en1</td>
                     <td>Pollutants</td>
                     <td><a href="#" class="metadatalink" onclick="showMetaData('epa'); return false;">EPA National Emissions Inventory</a></td>
-                    <td>2017</td>
+                    <td>This dataset contains the National Emissions Inventory (NEI) from the U.S. Environmental Protection Agency, which provides comprehensive estimates of air emissions for criteria pollutants, precursors, and hazardous air pollutants across the United States. The NEI is compiled every three years using data from state, local, and tribal agencies and EPA models and supports air quality and environmental exposure research.</td>
                   </tr>
                   <tr>
                     <td>en2</td>
                     <td>Traffic</td>
                     <td><a href = "#" class="metadatalink" onclick = "showMetaData('nanda_traffic_volume'); return false;">NANDA Traffic Volume</a></td>
-                    <td></td>
+                    <td>This dataset provides estimates of roadway traffic volume aggregated to ZIP Code Tabulation Areas (ZCTAs), compiled by the National Neighborhood Data Archive (NaNDA). The data capture spatial variation in transportation intensity and are used to assess mobility patterns and traffic-related environmental exposures.</td>
                   </tr>
                   <tr>
                     <td>en3</td>
                     <td>Toxic Release Sites</td>
                     <td><a href="#" class="metadatalink" onclick="showMetaData('epa_toxic_release_inventory'); return false;">EPA Toxic Release Inventory Sites</a></td>
-                    <td></td>
+                    <td>This dataset contains facility-level data from the U.S. Environmental Protection Agency’s Toxic Release Inventory (TRI), which tracks annual releases and transfers of toxic chemicals to air, water, and land. Facilities across multiple industrial sectors report emissions, enabling analysis of environmental hazards and regulatory exposure.</td>
                   </tr>
                   <tr>
                     <td>en4</td>
                     <td>Water</td>
                     <td><a href="#" class="metadatalink" onclick="showMetaData('epa_safe_drinking_water_inventory'); return false;">Safe Drinking Water Inventory System</a></td>
-                    <td>1994-2023</td>
+                    <td>This dataset provides regulatory and compliance information on U.S. public drinking water systems from the EPA’s Safe Drinking Water Information System. Data include system characteristics, monitoring results, and violations, supporting analyses of drinking water quality and access.</td>
                   </tr>
                   <tr>
                     <td>en5</td>
                     <td>Internet Access</td>
                     <td><a href="#" class="metadatalink" onclick = "showMetaData('nanda_fcc'); return false;">NaNDA from Federal Communications Commission</a></td>
-                    <td>2000-2018</td>
+                    <td>This dataset provides small-area estimates of household internet access by census tract and ZIP Code Tabulation Area. The data capture geographic disparities in digital connectivity and broadband access.</td>
                   </tr>
                   <tr>
                     <td>en6</td>
                     <td>Land Use</td>
                     <td><a href="#" class="metadatalink" onclick="showMetaData('nanda_nat_land'); return false;">NaNDA National Land Cover Database</a></td>
-                    <td>2000-2016</td>
+                    <td>This dataset provides census tract–level measures of land cover and land use characteristics compiled by NaNDA. Variables describe the physical and environmental composition of neighborhoods and support analyses of urban form and environmental context.</td>
                   </tr>
                   <tr>
                     <td>en7</td>
                     <td>Energy Expenses</td>
                     <td><a href="#" class="metadatalink" onclick = "showMetaData('low_income_afforad'); return false;">Low Income Energy Affordability Data</a></td>
-                    <td></td>
+                    <td>This dataset documents state and local energy planning policies compiled by the National League of Cities. It includes information on energy initiatives and planning efforts relevant to local governance and sustainability.</td>
                   </tr>
                   <tr>
                     <td>en8</td>
                     <td>Transit</td>
                     <td><a href="https://www.openicpsr.org/openicpsr/project/111109/version/V1/view" target="_blank" class="metadatalink">NaNDA from National Transit Map</a></td>
-                    <td></td>
+                    <td>This dataset includes counts and locations of public transit stops aggregated to the census tract level. It supports analyses of transit accessibility and neighborhood transportation infrastructure.</td>
                   </tr>
 
                 </tbody>
@@ -472,19 +470,67 @@
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 </div>
-                <div class = "domain-dropdown">
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset provides 2010 county FIPS codes from the US Census Bureau. Each state is identified with its two-character U.S. Postal Service abbreviation and two-digit Federal Information Processing Series (FIPS) code, and each county is identified with its name and three-digit FIPS code</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                  <div class = "domain-dropdown">
                   <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                   </div>
-                  <div class="metadata_drop_content">
-                  <p>desc</p>
+                  <div class="metadata_drop_content" style="display: block">
+                  <p class="box_desc" style="display: block">desc</p>
                   </div>
                    <div class = "subdomain-dropdown">
                   <h1 class="metadata_subdomain"><strong>Subdomain: </strong>FIPS Codes</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                   </div>
-                  <div class="metadata_drop_content">
-                  <p>desc</p>
+                  <div class="metadata_drop_content" style="display: block">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
                   </div>
                 </div>
+                </div>
+                <table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>a1_fips_2010</td>
+                      <td>Fips codes in 2010</td>
+                      <td>INT</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_stname</td>
+                      <td>State name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_ctyname</td>
+                      <td>County name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+                 
+               
+                  
+              
 
                
 
@@ -497,6 +543,192 @@
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 </div>
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset provides county-level intercensal population estimates for the United States from 2010–2020, produced by the U.S. Census Bureau’s Population Estimates Program (PEP). Estimates are revised to be consistent with the 2010 and 2020 decennial censuses and offer a harmonized annual time series of total population by county. Population adjustments in this study use county population estimates from 2010.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p class ="data_processing_desc">DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">desc</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Population</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+          </section>
+
+          <section id="ipums" class ="metadata" style="display:none;">
+                <div class ="metadata_banner">
+                <div class ="metadata_banner_buttons">
+                <h2 class="metadata_header">IPUMS National Historical GIS</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+                </div>
+                 <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset, obtained from the National Historical Geographic Information System (NHGIS), provides county-level household summary data for 2018 based on U.S. Census Bureau sources. It includes counts and selected characteristics of households, supporting analyses of housing and demographic patterns across U.S. counties.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">desc</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Households</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+          </section>
+
+          <section id="ucg" class ="metadata" style="display:none;">
+                <div class ="metadata_banner">
+                <div class ="metadata_banner_buttons">
+                <h2 class="metadata_header">US Census Gazetteer</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+                </div>
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset contains the U.S. Census Gazetteer Files, which provide standardized geographic reference information for counties, places, and other geographic units across census years. Files include location identifiers, land and water area measures, and geographic coordinates to support spatial analysis and data linkage.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">desc</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Area</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                 <table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                      <td>a4_land_area_2010</td>
+                      <td>Land area in square miles in 2010</td>
+                      <td>FLOAT</td>
+                      <td>2010</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+          </section>
+          </section>
+
+            
+
+          <section id="nanda_fcc" class ="metadata" style="display:none;">
+                <div class ="metadata_banner">
+                <div class ="metadata_banner_buttons">
+                <h2 class="metadata_header">NANDA from Federal Communications Commission</h2>
+                <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+                </div>
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset provides county-level intercensal population estimates for the United States from 2010–2020, produced by the U.S. Census Bureau’s Population Estimates Program (PEP). Estimates are revised to be consistent with the 2010 and 2020 decennial censuses and offer a harmonized annual time series of total population by county. Population adjustments in this study use county population estimates from 2010.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">desc</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Population</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                 <table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>a1_fips_2010</td>
+                      <td>Fips codes in 2010</td>
+                      <td>INT</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_stname</td>
+                      <td>State name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_ctyname</td>
+                      <td>County name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
           </section>
 
           <section id="ipums" class ="metadata" style="display:none;">
@@ -514,18 +746,6 @@
                 <h2 class="metadata_header">US Census Gazetteer</h2>
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
-                </div>
-          </section>
-
-            
-
-          <section id="nanda_fcc" class ="metadata" style="display:none;">
-                <div class ="metadata_banner">
-                <div class ="metadata_banner_buttons">
-                <h2 class="metadata_header">NANDA from Federal Communications Commission</h2>
-                <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                </div>
-                </div>
           </section>
 
           <section id="epa" class ="metadata" style="display:none;">
@@ -535,6 +755,64 @@
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 </div>
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset contains the National Emissions Inventory (NEI) from the U.S. Environmental Protection Agency, which provides comprehensive estimates of air emissions for criteria pollutants, precursors, and hazardous air pollutants across the United States. The NEI is compiled every three years using data from state, local, and tribal agencies and EPA models and supports air quality and environmental exposure research.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Environment</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Pollutants</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                <!--<table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>a1_fips_2010</td>
+                      <td>Fips codes in 2010</td>
+                      <td>INT</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_stname</td>
+                      <td>State name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>a1_ctyname</td>
+                      <td>County name</td>
+                      <td>STRING</td>
+                      <td>2010</td>
+                    </tr>
+                  </tbody>
+                </table> --->
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+
           </section>
 
           <section id="nanda_traffic_volume" class ="metadata" style="display:none;">
@@ -544,6 +822,70 @@
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 </div>
+                <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset provides estimates of roadway traffic volume aggregated to ZIP Code Tabulation Areas (ZCTAs), compiled by the National Neighborhood Data Archive (NaNDA). The data capture spatial variation in transportation intensity and are used to assess mobility patterns and traffic-related environmental exposures.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Environment</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Traffic</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                <table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>en2_totpop</td>
+                      <td>County total population number in 2010</td>
+                      <td>FLOAT</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>en2_den_traffic</td>
+                      <td>Average daily traffic counts per 1000 people</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                    <tr>
+                      <td>en2_aden_traffic</td>
+                      <td>Average daily traffic counts per sq mile</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                    <tr>
+                      <td>en2_den_nonhw_traffic</td>
+                      <td>Non-highway traffic counts per 1000 people</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                  </tbody>
+                </table> 
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
+
           </section>
 
           <section id="epa_toxic_release_inventory" class ="metadata" style="display:none;">
@@ -553,6 +895,69 @@
                 <button class="metadata_back" onclick="hideMetaData(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                 </div>
                 </div>
+                 <div class ="metadata_content">
+                  <div metadata_inline_headings>
+                 <p class="datasource_desc">This dataset provides estimates of roadway traffic volume aggregated to ZIP Code Tabulation Areas (ZCTAs), compiled by the National Neighborhood Data Archive (NaNDA). The data capture spatial variation in transportation intensity and are used to assess mobility patterns and traffic-related environmental exposures.</h3>
+                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
+                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                 </div>
+                 <div class ="boxes_metadata">
+                <div class = "domain-dropdown">
+                  <h1 class="metadata_domain"><strong>Domain: </strong>Environment</h1>
+                  <button class="md_back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
+                  </div>
+                   <div class = "subdomain-dropdown">
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Traffic</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                  <div class="metadata_drop_content">
+                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  </div>
+                </div>
+                </div>
+                <table class="table table-striped metadata_table">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                      <th>Variable Type</th>
+                      <th>Years</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>en2_totpop</td>
+                      <td>County total population number in 2010</td>
+                      <td>FLOAT</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>en2_den_traffic</td>
+                      <td>Average daily traffic counts per 1000 people</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                    <tr>
+                      <td>en2_aden_traffic</td>
+                      <td>Average daily traffic counts per sq mile</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                    <tr>
+                      <td>en2_den_nonhw_traffic</td>
+                      <td>Non-highway traffic counts per 1000 people</td>
+                      <td>FLOAT</td>
+                      <td>2018</td>
+                    </tr>
+                  </tbody>
+                </table> 
+                <a href ="#">
+                <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
+                </a>
           </section>
 
           <section id="epa_safe_drinking_water_inventory" class ="metadata" style="display:none;">
@@ -1851,7 +2256,7 @@
           this.classList.add('active');
           const content = document.getElementById(domain);
           if (content) content.style.display = 'block';
-        });
+        }); 
       });
 
 
@@ -1888,9 +2293,29 @@
         document.querySelector('.datasetspage').style.display = 'block';
       }
       
+      function showCodebook(){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.getElementById('codebook').classList.add('active');
+        const codebookTab = document.querySelector('.nav-link[data-tab="codebook"]');
+        codebookTab.classList.add('active');
+        const datasetTab = document.querySelector('.nav-link[data-tab="datasets"]');
+        datasetTab.classList.remove('active');
+        window.scrollTo(0,-10);
+      }
 
   
+      function toggleBoxDesc(){
+        if (document.querySelector('.box_desc').style.display === 'none'){
+          document.querySelectorAll('.box_desc').forEach(el => el.style.display = 'block');
+          document.querySelectorAll('.metadata_drop_content').forEach(el => el.style.display = 'block');
+        } 
+        
+        else {
+          document.querySelectorAll('.box_desc').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('.metadata_drop_content').forEach(el => el.style.display = 'none');
+        }
 
+      }
   
 
 
@@ -1916,6 +2341,40 @@
         }
       }
 
+
+       const mediaQuery = window.matchMedia('(max-width: 1200px)');
+
+      function shrinkScreen(e){
+        if (e.matches){
+          document.querySelectorAll('.box_desc').forEach(el => el.style.display ='none');
+          document.querySelectorAll('.metadata_drop_content').forEach(el => el.style.display = 'none');
+        }
+
+        else{
+          document.querySelectorAll('.box_desc').forEach(el => el.style.display ='block');
+          document.querySelectorAll('.metadata_drop_content').forEach(el => el.style.display = 'block');
+
+        }
+      }
+
+      mediaQuery.addEventListener('change', shrinkScreen);
+      shrinkScreen(mediaQuery);
+
+
+      const mediaQuery2 = window.matchMedia('(max-width: 750px)');
+
+      function backShrink(e){
+        if (e.matches){
+          document.querySelectorAll('.metadata_back').forEach(el => el.style.display = 'none')
+        }
+
+        else{
+          document.querySelectorAll('.metadata_back').forEach(el => el.style.display = 'block')
+        }
+      }
+
+      mediaQuery2.addEventListener('change', backShrink);
+      backShrink(mediaQuery2);
 
     </script>
 

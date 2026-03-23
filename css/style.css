@@ -100,10 +100,11 @@ nav ul li.active a {
 }
 
 .domain-dataset-headers{
-  font-size: 18px;
+  font-size: 15px;
   color: #156a69;
   font-weight: bold;
   margin-bottom: 10px;
+  padding-bottom: 3px;
 }
 
 
@@ -212,38 +213,56 @@ table#codebookTable tbody tr:hover{
 }
 
 #about .section-subheader{
-  color:#156a69;
+  color: white;
   font-size: 19px;
   font-weight: bold;
 }
 
 .metadata_banner{
-  background-color:#82a9a8;
+  background-color:#156a69;
   padding: 10px;
   margin: -45px -45px 30px -45px;  
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
 
 .metadata_header{
   font-size: 29px;
-  color:#156a69;
+  color:#ffffff;
   font-weight: bold;
   margin: 0;
   padding: 0;
   margin: auto;
   text-align: center;
-  transform: translateX(-22%);
   
   
 
 }
 .metadata_back{
-color:#156a69;
+color:#ffffff;
 background-color: transparent;
 border: 0px solid transparent;
+padding-right: 3px;
 font-size: 30px;
 font-weight: bold;
-margin-right: auto;
+margin-right: 3px;
+position:absolute;
+left:10px;
+}
+
+.back{
+color:#ffffff;
+background-color: pink;
+width: 4px;
+height: 4px;
+border: 0px solid transparent;
+rotate: 270deg;
+font-size: 10px;
+font-weight: bold;
 }
 
 .metadata_banner_buttons{
@@ -269,24 +288,7 @@ margin-right: auto;
   text-decoration: underline;
 }
 
-.domain-dropdown{
-  background-color: #156a69;
-  color: white;
-  width: 15vw;
-  height: 5vh;
-  display: flex;
-  flex-direction: column;
-}
 
-.metadata_domain{
-  background-color: transparent;
-  border-color: transparent;
-  padding: 0;
-  color: white;
-  font-size: 15px;
-  padding-left: 2px;
-  transform: translateY(-65%);
-}
 
 .metadata_drop_content{
   background-color: #156a69;
@@ -295,14 +297,16 @@ margin-right: auto;
   padding-left: 3px;
   margin-top: 1px;
   width:15vw;
-  height: 15vh;
-  font-size: 10px;
+  height: 25vh;
+  font-size: 12px;
+  margin-bottom: 1px;
 }
 
 .subdomain-dropdown{
   background-color: #156a69;
   border-color: transparent;
   padding-top: 0;
+  margin-bottom: 1px;
   margin-top: 0px;
   color: white;
   padding-left: 2px;
@@ -312,10 +316,134 @@ margin-right: auto;
   
 }
 
-.metadata_subdomain{
-  font-size: 15px;
-   padding-top: 10px;
-   padding-bottom: 5px;
-   margin-bottom: 0px;
 
+
+.metadata_content{
+  display: flex;
+  gap: 10px;
+  padding-bottom: 0;
+  margin-bottom:0;
+}
+
+.boxes_metadata{
+  display: column;
+  margin-top: -20px;
+
+}
+
+.metadata_inline_headings{
+  display:column;
+}
+
+.metadata_table th{
+  font-weight: 100em;
+}
+
+.full_codebook{
+  background-color:#156a69;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 650;
+  font-size: 15px;
+  border: transparent;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+.link_repository{
+  color:#82a9a8;
+  text-decoration: underline;
+  font-weight: 650;
+
+}
+
+.link_repository:hover, .link_repository:active, .link_repository:focus{
+  color:#156a69;
+  text-decoration: underline;
+}
+
+
+.box_desc{
+  padding: 4px;
+  font-size: 8px;
+  color: white;
+  flex-wrap: wrap;
+  width: 15vw;
+  height: 20vh;
+}
+
+.subdomain-dropdown{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 4px;
+  padding-right: 1px;
+}
+
+.domain-dropdown{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  background-color: #156a69;
+  border-color: transparent;
+  margin-top: 0px;
+  color: white;
+  padding-left: 2px;
+  font-size: 10px;
+  width: 15vw;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.metadata_domain{
+  background-color: transparent;
+  border-color: transparent;
+  margin: 3px;
+  padding-top: 0px;
+  color: white;
+  font-size: 13px;
+  padding-left: 2px;
+  padding-right: 2px;
+  transform: translateY(-5%);
+}
+
+.md_back{
+color:#ffffff;
+background-color: transparent;
+border: 0px solid transparent;
+rotate: 270deg;
+font-size: 10px;
+font-weight: bold;
+margin-right: auto;
+flex-shrink: 0;
+padding: 1px;
+transform: translateY(-2%);
+}
+
+
+.back{
+color:#ffffff;
+background-color: transparent;
+border: 0px solid transparent;
+rotate: 270deg;
+font-size: 10px;
+font-weight: bold;
+margin-right: auto;
+flex-shrink: 0;
+padding: 1px;
+transform: translateY(-2%);
+}
+
+.metadata_subdomain{
+  font-size: 13px;
+  margin: 3px;
+}
+
+.sd_drop_content_desc{
+  font-size: 8px;
 }
