@@ -263,6 +263,8 @@ border: 0px solid transparent;
 rotate: 270deg;
 font-size: 10px;
 font-weight: bold;
+padding: 1px;
+margin-right: 1px;
 }
 
 .metadata_banner_buttons{
@@ -406,7 +408,7 @@ font-weight: bold;
   margin: 3px;
   padding-top: 0px;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   padding-left: 2px;
   padding-right: 2px;
   transform: translateY(-5%);
@@ -431,16 +433,16 @@ color:#ffffff;
 background-color: transparent;
 border: 0px solid transparent;
 rotate: 270deg;
-font-size: 10px;
+font-size: 9px;
 font-weight: bold;
 margin-right: auto;
 flex-shrink: 0;
-padding: 1px;
+padding-right: 2px;
 transform: translateY(-2%);
 }
 
 .metadata_subdomain{
-  font-size: 13px;
+  font-size: 12px;
   margin: 3px;
 }
 
