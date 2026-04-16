@@ -22,7 +22,7 @@ aside#colorlib-aside {
 }
 #colorlib-logo a {
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -40,6 +40,7 @@ aside#colorlib-aside {
   overflow-y: auto;
 }
 
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -50,7 +51,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #156a69;
-  font-weight: 650;
+  font-weight: bold;
   font-size: 18px;
   display: block;
   padding: 8px;
@@ -77,36 +78,9 @@ nav ul li.active a {
 .domain-content.active {
   display: block;
 }
-.domain-tab, .domain-tab.active:hover, .domain-tab:focus{
+.domain-tabs button {
   margin-right: 8px;
-  background-color:#82a9a8;
-  color:#156a69;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 650;
-  font-size: 12px;
-  border-radius: 0px;
-  outline: none;
 }
-
-
-.domain-tab.active, .domain-tab:hover, .domain-tab.active:focus{
-  background-color: #156a69;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 650;
-  font-size: 12px;
-  border-radius: 0px;
-  outline: none;
-}
-
-.domain-dataset-headers{
-  font-size: 15px;
-  color: #156a69;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding-bottom: 3px;
-}
-
 
 *::before,
 *::after {
@@ -159,7 +133,16 @@ nav#colorlib-main-menu li.nav-link:hover a{
 nav#colorlib-main-menu li.nav-link:hover::before{
   width: 100%;
 }
-
+h2.section-header{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1.5s forwards;
+}
+p.section-p{
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeLEFT 1s forwards;
+}
 
 @keyframes fadeLEFT{
   from{
@@ -195,257 +178,4 @@ table#codebookTable td{
 
 table#codebookTable tbody tr:hover{
   box-shadow: 0px 0px 4px #156a69;
-}
-
-.section-header{
-  text-align: center;
-  font-size: 29px;
-  color: white;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  letter-spacing: 2px;
-}
-.section_banner{
-  background-color:#156a69;
-  padding: 16px;
-  margin: -45px -45px 30px -45px;  
-}
-
-#about .section-subheader{
-  color: white;
-  font-size: 19px;
-  font-weight: bold;
-}
-
-.metadata_banner{
-  background-color:#156a69;
-  padding: 10px;
-  margin: -45px -45px 30px -45px;  
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
-
-
-.metadata_header{
-  font-size: 29px;
-  color:#ffffff;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  margin: auto;
-  text-align: center;
-  
-  
-
-}
-.metadata_back{
-color:#ffffff;
-background-color: transparent;
-border: 0px solid transparent;
-padding-right: 3px;
-font-size: 30px;
-font-weight: bold;
-margin-right: 3px;
-position:absolute;
-left:10px;
-}
-
-.back{
-color:#ffffff;
-background-color: pink;
-width: 4px;
-height: 4px;
-border: 0px solid transparent;
-rotate: 270deg;
-font-size: 10px;
-font-weight: bold;
-padding: 1px;
-margin-right: 1px;
-}
-
-.metadata_banner_buttons{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: row-reverse;
-  gap: 10px;
-  justify-content: center;
-}
-
-.metadatalink{
-  color:#156a69;
-  text-decoration: underline;
-}
-
-.metadatalink{
-  color:#156a69;
-  text-decoration: none;
-}
-.metadatalink:hover{
-  color:#82a9a8;
-  text-decoration: underline;
-}
-
-
-
-.metadata_drop_content{
-  background-color: #156a69;
-  color: white;
-  padding-bottom: 20px;
-  padding-left: 3px;
-  margin-top: 1px;
-  width:15vw;
-  height: 25vh;
-  font-size: 12px;
-  margin-bottom: 1px;
-}
-
-.subdomain-dropdown{
-  background-color: #156a69;
-  border-color: transparent;
-  padding-top: 0;
-  margin-bottom: 1px;
-  margin-top: 0px;
-  color: white;
-  padding-left: 2px;
-  font-size: 10px;
-  width: 15vw;
-  padding-bottom: 2px;
-  
-}
-
-
-
-.metadata_content{
-  display: flex;
-  gap: 10px;
-  padding-bottom: 0;
-  margin-bottom:0;
-}
-
-.boxes_metadata{
-  display: column;
-  margin-top: -20px;
-
-}
-
-.metadata_inline_headings{
-  display:column;
-}
-
-.metadata_table th{
-  font-weight: 100em;
-}
-
-.full_codebook{
-  background-color:#156a69;
-  color:#ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 650;
-  font-size: 15px;
-  border: transparent;
-  padding: 8px 16px;
-  margin-top: 10px;
-}
-
-.link_repository{
-  color:#82a9a8;
-  text-decoration: underline;
-  font-weight: 650;
-
-}
-
-.link_repository:hover, .link_repository:active, .link_repository:focus{
-  color:#156a69;
-  text-decoration: underline;
-}
-
-
-.box_desc{
-  padding: 4px;
-  font-size: 8px;
-  color: white;
-  flex-wrap: wrap;
-  width: 15vw;
-  height: 20vh;
-}
-
-.subdomain-dropdown{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-top: 4px;
-  padding-right: 1px;
-}
-
-.domain-dropdown{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  background-color: #156a69;
-  border-color: transparent;
-  margin-top: 0px;
-  color: white;
-  padding-left: 2px;
-  font-size: 10px;
-  width: 15vw;
-  padding-bottom: 3px;
-  padding-top: 3px;
-}
-
-.metadata_domain{
-  background-color: transparent;
-  border-color: transparent;
-  margin: 3px;
-  padding-top: 0px;
-  color: white;
-  font-size: 12px;
-  padding-left: 2px;
-  padding-right: 2px;
-  transform: translateY(-5%);
-}
-
-.md_back{
-color:#ffffff;
-background-color: transparent;
-border: 0px solid transparent;
-rotate: 270deg;
-font-size: 10px;
-font-weight: bold;
-margin-right: auto;
-flex-shrink: 0;
-padding: 1px;
-transform: translateY(-2%);
-}
-
-
-.back{
-color:#ffffff;
-background-color: transparent;
-border: 0px solid transparent;
-rotate: 270deg;
-font-size: 9px;
-font-weight: bold;
-margin-right: auto;
-flex-shrink: 0;
-padding-right: 2px;
-transform: translateY(-2%);
-}
-
-.metadata_subdomain{
-  font-size: 12px;
-  margin: 3px;
-}
-
-.sd_drop_content_desc{
-  font-size: 8px;
 }
