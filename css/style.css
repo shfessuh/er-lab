@@ -2,6 +2,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 .container-wrap {
   display: flex;
@@ -38,6 +40,7 @@ aside#colorlib-aside {
   flex: 1;
   padding: 40px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 nav ul {
@@ -67,9 +70,11 @@ nav ul li.active a {
 }
 .tab-section {
   display: none;
+  
 }
 .tab-section.active {
   display: block;
+
 }
 .domain-content {
   display: none;
@@ -212,11 +217,33 @@ table#codebookTable tbody tr:hover{
   margin: -45px -45px 30px -45px;  
 }
 
+.section_bannerSD{
+  background-color: #156a69;
+  padding: 16px;
+  text-align: center;
+  margin: -45px -45px 30px -45px;
+}
+
+#structural{
+  padding: 0;
+}
 #about .section-subheader{
-  color: white;
-  font-size: 19px;
+  color: #156a69;
+  font-size: 16px;
   font-weight: bold;
 }
+
+.section-subheader{
+  color: #156a69;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.metadata_subsection_separator{
+  line-height: 0.75;
+}
+
+
 
 .metadata_banner{
   background-color:#156a69;
@@ -305,6 +332,7 @@ margin-right: 1px;
 }
 
 .subdomain-dropdown{
+  display: none;
   background-color: #156a69;
   border-color: transparent;
   padding-top: 0;
@@ -350,12 +378,14 @@ margin-right: 1px;
   border: transparent;
   padding: 8px 16px;
   margin-top: 10px;
+  display: column;
 }
 
 .link_repository{
   color:#82a9a8;
   text-decoration: underline;
   font-weight: 650;
+  
 
 }
 
@@ -441,11 +471,7 @@ padding-right: 2px;
 transform: translateY(-2%);
 }
 
-.metadata_subdomain{
-  font-size: 12px;
-  margin: 3px;
-}
-
 .sd_drop_content_desc{
   font-size: 8px;
+  display: none;
 }

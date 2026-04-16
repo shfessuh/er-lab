@@ -21,23 +21,39 @@
             <div class="author-img">
               <img src="lab-logo.png" alt="Logo" style="width:100%; height:auto;" />
             </div>
-            <h1 id="colorlib-logo"><a href="#">Structural Drivers</a></h1>
+      
           </div>
           <nav id="colorlib-main-menu" role="navigation">
+              <h1 id="colorlib-logo"><a href="#" class = "nav-link active" data-tab="structural" onClick="hideMetaData()">Structural Drivers</a></h1>
             <ul>
               <li class="nav-link active" data-tab="about" onclick="hideMetaData()"><a href="#">About</a></li>
               <li class="nav-link" data-tab="datasets" onclick="hideMetaData()"><a href="#">Datasets</a></li>
-              <li class="nav-link" data-tab="codebook" onclick="hideMetaData()"><a href="#">Codebook</a></li>
+              <li class="nav-link" data-tab="codebook" onclick="hideMetaData2()"><a href="#">Codebook</a></li>
               <li class="nav-link" data-tab="contact" onclick = "hideMetaData()"><a href="#">Contact</a></li>
             </ul>
           </nav>
         </aside>
 
+
+      
         <div id="colorlib-main">
+          
+        <!--- STRUCTURAL DRIVERS FRONT PAGE-->
+        <section id="structural" class="tab-section">
+          <div class ="section_banner">
+            <h1 class="section-header">Structural Drivers</h1>
+            </div>
+         <p>A county-level indicator framework for characterizing the multidimensional structural drivers of MCH and their role in racial/ethnic health disparities across the United States.</p>
+         <h3 class="section-subheader">What are  structural drivers?</h3>
+        <p>Structural drivers are the policies, institutions, and systems that generate inequalities in socioeconomic status and health—they are the "cause of the causes." This is a critical distinction from social determinants of health (SDOH). Where established SDOH measures like the Area Deprivation Index aggregate individual Census data to characterize area-level deprivation (e.g., proportion of homeowners), structural driver indicators aim to capture the institutional processes that produce those outcomes (e.g., mortgage lending practices, zoning policy). This distinction matters for intervention: identifying structural processes points toward upstream policy targets with greater population health impact than interventions focused on modifying individual behaviors or social conditions.</p>
+        <h3 class="section-subheader">Why these indicators and data?</h3>
+        <p>Each domain captures a distinct mechanism through which structural conditions generate inequities in social determinants and health outcomes. Indicators were selected to measure the process rather than the outcome, prioritizing publicly available, county-level data with near-universal coverage across the ~3,143 U.S. counties</p>
+        </section>
+
           <!-- About Section -->
           <section id="about" class="tab-section active">
             <div class ="section_banner">
-            <h1 class="section-header">Structural Drivers of Health</h1>
+            <h1 class="section-header">About</h1>
             </div>
             <h3 class="section-subheader">About</h3>
             <p class="section-p">This project was developed to support research that seeks to understand how <b>structural drivers</b>—policies, systems, and institutional conditions—shape population health and health inequities across place, with a particular focus on maternal and child health. Rather than relying solely on traditional social determinants of health measures which aggregate individual-level data, our project centers upstream structural factors such as housing and lending systems, labor markets, education, infrastructure, environmental exposures, and political and economic conditions.</p>
@@ -490,7 +506,7 @@
         </div>  
           </section>
       <!-- Meta Data Page-->
-  <section id="he1_hc_md" class ="metadata" style="display:none;">
+ <!-- <section id="he1_hc_md" class ="metadata" style="display:none;">
                 <div class ="metadata_banner">
                 <div class ="metadata_banner_buttons">
                 <h2 class="metadata_header">NaNDA Health Care Services by Census Tract and ZCTA</h2>
@@ -500,7 +516,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides longitudinal counts of health care facilities and services by census tract and ZIP Code Tabulation Area from 1990–2021. It supports analyses of health care access and spatial inequality.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -513,7 +529,11 @@
                   <p class="box_desc" style="display: block">These datasets captures the structural supply of health care infrastructure across counties  (physicians, dentists, mental health providers, hospitals, pharmacies, and federally qualified health centers) as a policy-determined feature of place</p>
                   </div>
                    <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Health Care</h1>
+                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>FIPS Codes</h1>
+                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
+                  </div>
+                   
+  
                   <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
@@ -554,7 +574,7 @@
                 <a href ="#">
                 <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
                 </a>
-              </section>
+              </section>-->
 
           <section id="vera" class ="metadata" style="display:none;">
                 <div class ="metadata_banner">
@@ -566,7 +586,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides 2010 county FIPS codes from the US Census Bureau. Each state is identified with its two-character U.S. Postal Service abbreviation and two-digit Federal Information Processing Series (FIPS) code, and each county is identified with its name and three-digit FIPS code</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -577,14 +597,9 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">desc</p>
+                  
                   </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>FIPS Codes</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
-                  </div>
+                 
                 </div>
                 </div>
                 <table class="table table-striped metadata_table">
@@ -639,10 +654,12 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides county-level intercensal population estimates for the United States from 2010–2020, produced by the U.S. Census Bureau’s Population Estimates Program (PEP). Estimates are revised to be consistent with the 2010 and 2020 decennial censuses and offer a harmonized annual time series of total population by county. Population adjustments in this study use county population estimates from 2010.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p class ="data_processing_desc">DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
+
+
                  <div class ="boxes_metadata">
                 <div class = "domain-dropdown">
                   <h1 class="metadata_domain"><strong>Domain: </strong>Administrative</h1>
@@ -650,19 +667,16 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">desc</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Population</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
+
                   </div>
                 </div>
                 </div>
+                
                 <a href ="#">
                 <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
                 </a>
+                
           </section>
 
           <section id="ipums" class ="metadata" style="display:none;">
@@ -675,7 +689,7 @@
                  <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset, obtained from the National Historical Geographic Information System (NHGIS), provides county-level household summary data for 2018 based on U.S. Census Bureau sources. It includes counts and selected characteristics of households, supporting analyses of housing and demographic patterns across U.S. counties.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -687,13 +701,7 @@
                   <div class="metadata_drop_content">
                   <p class="box_desc">desc</p>
                   </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Households</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
-                  </div>
+                  
                 </div>
                 </div>
                 <a href ="#">
@@ -711,7 +719,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset contains the U.S. Census Gazetteer Files, which provide standardized geographic reference information for counties, places, and other geographic units across census years. Files include location identifiers, land and water area measures, and geographic coordinates to support spatial analysis and data linkage.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -722,14 +730,11 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">desc</p>
+
+                 
                   </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Area</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
-                  </div>
+                  
+                  
                 </div>
                 </div>
                  <table class="table table-striped metadata_table">
@@ -768,7 +773,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides small-area estimates of household internet access by census tract and ZIP Code Tabulation Area. The data capture geographic disparities in digital connectivity and broadband access.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -779,13 +784,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Internet</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -821,7 +820,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset contains the National Emissions Inventory (NEI) from the U.S. Environmental Protection Agency, which provides comprehensive estimates of air emissions for criteria pollutants, precursors, and hazardous air pollutants across the United States. The NEI is compiled every three years using data from state, local, and tribal agencies and EPA models and supports air quality and environmental exposure research.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -832,13 +831,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Pollutants</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -888,7 +881,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides estimates of roadway traffic volume aggregated to ZIP Code Tabulation Areas (ZCTAs), compiled by the National Neighborhood Data Archive (NaNDA). The data capture spatial variation in transportation intensity and are used to assess mobility patterns and traffic-related environmental exposures.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -899,13 +892,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Traffic</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -961,7 +948,7 @@
                  <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset contains facility-level data from the U.S. Environmental Protection Agency's Toxic Release Inventory (TRI), which tracks annual releases and transfers of toxic chemicals to air, water, and land. Facilities across multiple industrial sectors report emissions, enabling analysis of environmental hazards and regulatory exposure.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -972,13 +959,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Traffic</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div> 
@@ -997,7 +978,7 @@
                   <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides regulatory and compliance information on U.S. public drinking water systems from the EPA’s Safe Drinking Water Information System. Data include system characteristics, monitoring results, and violations, supporting analyses of drinking water quality and access.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1008,13 +989,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Traffic</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div> 
@@ -1069,7 +1044,7 @@
                  <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides census tract–level measures of land cover and land use characteristics compiled by NaNDA. Variables describe the physical and environmental composition of neighborhoods and support analyses of urban form and environmental context.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1080,13 +1055,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Land Use</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div> 
@@ -1104,7 +1073,7 @@
                  <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset documents state and local energy planning policies compiled by the National League of Cities. It includes information on energy initiatives and planning efforts relevant to local governance and sustainability.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1115,13 +1084,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Energy Expenses</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div> 
@@ -1174,7 +1137,7 @@
                  <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset includes counts and locations of public transit stops aggregated to the census tract level. It supports analyses of transit accessibility and neighborhood transportation infrastructure.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1185,13 +1148,7 @@
                   </div>
                   <div class="metadata_drop_content">
                   <p class="box_desc">This data collection focuses on environmental conditions that shape exposure and access across U.S. counties. It includes publicly available datasets on pollutants, traffic volume, toxic release sites, drinking water systems, land use, energy costs, internet infrastructure, and public transit. These indicators reflect how environmental risks and resources are distributed and how they contribute to place-based disparities in health and well-being.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Transit</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div> 
@@ -1212,7 +1169,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of post offices and financial institutions aggregated to census tracts and ZIP Code Tabulation Areas. It supports analyses of financial and service access.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1223,13 +1180,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1281,7 +1232,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of grocery stores and food retailers aggregated to small geographic areas. It supports analyses of neighborhood food access.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1292,13 +1243,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: none">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: none">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1350,7 +1295,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of retail establishments aggregated to census tracts and ZIP Code Tabulation Areas. It supports analyses of local commercial environments.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1361,13 +1306,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1426,7 +1365,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of dollar stores aggregated to small geographic units. It supports analyses of retail concentration and neighborhood disinvestment.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1437,13 +1376,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1483,7 +1416,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of alcohol, tobacco, cannabis, vape, and convenience retailers. It supports analyses of health-related retail exposure.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1494,13 +1427,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1552,7 +1479,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of restaurants, bars, and related establishments. It supports analyses of food environments and local economies.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1563,13 +1490,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1621,7 +1542,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides locations of authorized SNAP retailers compiled by the U.S. Department of Agriculture. It supports analyses of food assistance access and retail participation.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1632,13 +1553,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Business and Retail</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1672,7 +1587,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1683,13 +1598,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Lending and Credit</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1707,7 +1616,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides detailed information on federal contract and grant awards reported through USAspending.gov. It supports analyses of government spending and resource allocation.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1718,13 +1627,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Government Spending</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1742,7 +1645,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1753,13 +1656,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Community Supports</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1777,7 +1674,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides locations of social service providers aggregated to census tracts and ZIP Code Tabulation Areas. It supports analyses of service availability and neighborhood support infrastructure.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1788,13 +1685,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Community Supports</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1846,7 +1737,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">Urban Institute Community-Based Development Organization Population</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1857,13 +1748,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Community Supports</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -1881,7 +1766,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">NaNDA Arts, Entertainment, and Leisure Establishments by Census Tract and ZCTA</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1892,13 +1777,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Community Supports</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -1916,7 +1795,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and locations of civic, social, and religious organizations. It supports analyses of community institutions and social infrastructure.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1927,13 +1806,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets captures the economic infrastructure of counties through indicators of financial access (banks, commercial lending), the retail food environment (grocery stores, dollar stores, SNAP retailers), government spending, and the density of nonprofit and civic organizations. These indicators reflect structural investment decisions  and whether private markets and public institutions have allocated resources to support economic stability and community resilience.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Community Supports</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                
                   </div>
                 </div>
                 </div>
@@ -1952,7 +1825,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides quantitative indices measuring racial and socioeconomic residential segregation across geographic units. The indices support analyses of spatial inequality and neighborhood stratification.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1963,13 +1836,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential Segregation</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -1987,7 +1854,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides census tract–level longitudinal mortgage lending data derived from Home Mortgage Disclosure Act filings. It enables analysis of lending patterns, access to credit, and financial inequality over time.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -1998,13 +1865,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Mortgage Lending</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2064,7 +1925,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2075,13 +1936,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Mortgage Lending</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2099,7 +1954,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2110,13 +1965,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Foreclosures</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2134,7 +1983,7 @@
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2145,13 +1994,7 @@
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Public Housing</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2212,7 +2055,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides counts and characteristics of housing units from the U.S. Census Bureau. The data support analyses of housing supply, vacancy, and residential development.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2223,13 +2066,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Housing Units</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2265,7 +2102,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides Fair Market Rent estimates and income eligibility limits produced by the U.S. Department of Housing and Urban Development. The data are commonly used in housing affordability and policy analyses.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2276,13 +2113,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These data sources measures the institutional systems that determine where people live and under what conditions, capturing the structural processes that produce segregation and housing insecurity. Indicators include residential segregation indices, mortgage lending practices, foreclosures, subsidized housing supply, and rental market conditions.</p>       
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Rental Market</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                
                   </div>
                 </div>
                 </div>
@@ -2301,7 +2132,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2312,13 +2143,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential School Segregation</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2336,7 +2161,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset, from the Segregation Tracking Project at the Stanford Education Data Archive, provides measures of racial and socioeconomic segregation across U.S. neighborhoods and schools nationwide, enabling analysis of spatial and educational inequality across geographic contexts.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2347,13 +2172,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential School Segregation</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2371,7 +2190,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc"></h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2382,13 +2201,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential School Segregation</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2406,7 +2219,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides census tract–level counts of primary and secondary schools from 2000–2018. It supports analyses of educational infrastructure and access.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2417,13 +2230,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential Schools and Schooling Resources</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2477,7 +2284,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset from the National Center for Education Statistics’ Common Core of Data (CCD) provides district- and school-level fiscal information, including revenues, expenditures, and financial indicators, to support analysis of education funding and resource allocation across U.S. public schools and districts.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2488,13 +2295,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential School Finances</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2512,9 +2313,15 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset contains institution-level data on U.S. postsecondary institutions compiled by the National Center for Education Statistics. It includes enrollment, finance, and institutional characteristics.</h3>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
-                  <h3 class="domain-dataset-headers">Description of Data Processing</h3>
-                  <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
+                  <p><a href="https://datacatalog.urban.org/dataset/racial-and-ethnic-representativeness-us-postsecondary-education-institutions" class="link_repository" target="blank">Link to original data source</a></p>
+                  <h3 class="section-subheader">Metadata</h3>
+
+                  <div class = "metadata_subsection_separator">
+                  <p><b>Code: </b>ed6</p>
+                  <p><b>Subdomain: </b>Higher Education</p>
+                  <p><b>Years: </b>2018</p>
+                  <p><b>Data Lead: </b>Dong </p>
+                  </div>
                  </div>
                  <div class ="boxes_metadata">
                   <div class = "domain-dropdown">
@@ -2523,13 +2330,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets capture structurally distinct mechanisms: school segregation reflecting policy decisions about district boundaries and attendance zones, school access, and school resource allocation  reflecting how property-tax financing creates a structural feedback loop between housing markets and educational opportunity. Together these indicators measure the quality and equity of educational infrastructure counties produce</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Residential Higher Education</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2549,6 +2350,14 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                       <td>FLOAT</td>
                       <td>2018</td>
                     </tr>
+                    </tbody>
+                    </table>
+                    <h3 class = "section-subheader">Dataset Cleaning & Processing</h3>
+                     <div class = "metadata_subsection_separator2">
+                  <p><b>FIPS Cleaning:</b> In the raw data provided by the Secondary Education Institution, some higher education institutions had the wrong information for state location, these errors were manually corrected and updated in the revised dataset</p>
+                  <p><b>Variable Cleaning: </b>None</p>
+                  <p><b>Other Cleaning: </b>None</p>
+                  </div>
                 <a href ="#">
                 <button class ="full_codebook" onClick="showCodebook(); return false;">Full Codebook</button>
                 </a>
@@ -2566,7 +2375,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides information on political contributions, lobbying, and campaign finance. OpenSecrets aggregates and standardizes filings from the FEC, state campaign finance agencies, Lobbying Disclosure Act reports, IRS records for 527 organizations, and other public disclosures.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2577,13 +2386,6 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measure the structural mechanisms through which communities can or cannot influence the policies that govern them and the degree to which they are subject to punitive state systems. Voter participation and political contributions capture civic and financial political power; incarceration rates capture how mass criminalization extracts individuals from communities, generating chronic stress and economic instability that are documented drivers of health disparities.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Political Contributions</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
                   </div>
                 </div>
                 </div>
@@ -2640,7 +2442,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides information on political contributions, lobbying, and campaign finance. OpenSecrets aggregates and standardizes filings from the FEC, state campaign finance agencies, Lobbying Disclosure Act reports, IRS records for 527 organizations, and other public disclosures.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2651,13 +2453,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measure the structural mechanisms through which communities can or cannot influence the policies that govern them and the degree to which they are subject to punitive state systems. Voter participation and political contributions capture civic and financial political power; incarceration rates capture how mass criminalization extracts individuals from communities, generating chronic stress and economic instability that are documented drivers of health disparities.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Political Contributions</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2713,7 +2509,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div class = "metadata_inline_headings">
                  <p class="datasource_desc">This dataset provides historical data on incarceration rates and prison populations compiled by the Vera Institute of Justice. It supports analyses of criminal legal system trends over time.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2724,13 +2520,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measure the structural mechanisms through which communities can or cannot influence the policies that govern them and the degree to which they are subject to punitive state systems. Voter participation and political contributions capture civic and financial political power; incarceration rates capture how mass criminalization extracts individuals from communities, generating chronic stress and economic instability that are documented drivers of health disparities.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Incarceration</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2752,7 +2542,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div class = "metadata_inline_headings">
                  <p class="datasource_desc">This dataset provides county-level measures of voter registration, turnout, and partisan composition. It supports analyses of political participation and electoral context.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2763,13 +2553,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measure the structural mechanisms through which communities can or cannot influence the policies that govern them and the degree to which they are subject to punitive state systems. Voter participation and political contributions capture civic and financial political power; incarceration rates capture how mass criminalization extracts individuals from communities, generating chronic stress and economic instability that are documented drivers of health disparities.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Voting</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2815,7 +2599,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                 <div class ="metadata_content">
                   <div metadata_inline_headings>
                  <p class="datasource_desc">This dataset provides information on political contributions, lobbying, and campaign finance. OpenSecrets aggregates and standardizes filings from the FEC, state campaign finance agencies, Lobbying Disclosure Act reports, IRS records for 527 organizations, and other public disclosures.</p>
-                  <p><a href="#" class="link_repository">Link to repository</a></p>
+                  <p><a href="#" class="link_repository">Link to original data source</a></p>
                   <h3 class="domain-dataset-headers">Description of Data Processing</h3>
                   <p>DATA PROCESSING DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat.</p>
                  </div>
@@ -2826,13 +2610,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measure the structural mechanisms through which communities can or cannot influence the policies that govern them and the degree to which they are subject to punitive state systems. Voter participation and political contributions capture civic and financial political power; incarceration rates capture how mass criminalization extracts individuals from communities, generating chronic stress and economic instability that are documented drivers of health disparities.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Political Contributions</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -2897,13 +2675,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measures the structure of local labor markets  industry composition, job growth, wage levels, and union density . These indicators capture whether the jobs available in a county come with economic security, health benefits, and worker protections, and whether workers have collective bargaining power, all of which determine the material conditions that mediate structural drivers and health outcomes.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Oppurtunities</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -2968,13 +2740,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measures the structure of local labor markets  industry composition, job growth, wage levels, and union density . These indicators capture whether the jobs available in a county come with economic security, health benefits, and worker protections, and whether workers have collective bargaining power, all of which determine the material conditions that mediate structural drivers and health outcomes.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Oppurtunities</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                 
                   </div>
                 </div>
                 </div>
@@ -3038,13 +2804,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
                   </div>
                   <div class="metadata_drop_content" style="display: block">
                   <p class="box_desc" style="display: block">These datasets measures the structure of local labor markets  industry composition, job growth, wage levels, and union density . These indicators capture whether the jobs available in a county come with economic security, health benefits, and worker protections, and whether workers have collective bargaining power, all of which determine the material conditions that mediate structural drivers and health outcomes.</p>
-                  </div>
-                   <div class = "subdomain-dropdown">
-                  <h1 class="metadata_subdomain"><strong>Subdomain: </strong>Unions</h1>
-                  <button class="back" onclick="toggleBoxDesc(); return false;"><i class="fa-solid fa-angle-left"></i></button>
-                  </div>
-                  <div class="metadata_drop_content" style="display: block">
-                  <p class = "sd_drop_content_desc" style="display: block">desc</p>
+                  
                   </div>
                 </div>
                 </div>
@@ -3087,7 +2847,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
             <div class ="section_banner">
             <h2 class="section-header">Codebook</h2>
             </div>
-            <label for="domainFilter">Filter by Domain:</label>
+            <label for="domainFilter" class="section-subheader">Filter by Domain:</label>
             <select id="domainFilter" class="form-control" style="width: 300px; max-width: 100%; margin-bottom: 20px;">
               <option value="all">Show All</option>
               <option value="Administrative">Administrative</option>
@@ -3104,260 +2864,259 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
               <thead>
                 <tr>
                   <th>Domain</th>
-                  <th>Subcategory</th>
+                  <th>Subdomain</t>
                   <th>Dataset</th>
                   <th>Variable</th>
-                  <th>Variable Type</th>
                   <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>Vera Incarceration</td>
-                  <td>Vera Institute’s Incarceration Trends</td>
+                  <td><a href="#" class ="metadatalink" onclick = "showMetaData2('vera'); return false;">Vera Institute’s Incarceration Trends</a></td>
                   <td>a1_fips_2010</td>
-                  <td>float64</td>
+                   
                   <td>Fips code for 2010</td>
                 </tr>
                  <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>a1_stname</td>
-                  <td>object</td>
+                     
                   <td>State name</td>
                 </tr>
                  <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>a1_ctyname</td>
-                  <td>object</td>
+                     
                   <td>County name</td>
                 </tr>
                  <tr data-domain="Power">
-                  <td><a href="#" onclick="goToDomainSection('Power')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>p2_total_pop</td>
-                  <td>int64</td>
+                    
                   <td>Population count of all ages</td>
                 </tr>
                 <tr data-domain="Power">
-                  <td><a href="#" onclick="goToDomainSection('Power')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>Vera Incarceration</td>
                   <td>Vera Institute’s Incarceration Trends</td>
                   <td>p2_total_jail_pop</td>
-                  <td>float64</td>
+                   
                   <td>Total jail population count:  Annual Survey of Jails /Census of Jails</td>
                 </tr>
                  <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_fips_2010</td>
-                  <td>int64</td>
+                    
                   <td>Fips code for 2010</td>
                 </tr>
                   <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_stname</td>
-                  <td>object</td>
+                     
                   <td>State name</td>
                 </tr>
                 <tr data-domain="Administrative">
-                  <td><a href="#" onclick="goToDomainSection('Administrative')">Economic and Employment</a></td>
+                 <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>a1_ctyname</td>
-                  <td>object</td>
+                     
                   <td>County name</td>
                 </tr>
                 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_accom_food</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Accommodation and Food Services sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_admin_support_waste</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Administrative and Support, Waste Management, and Remediation Services sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_agri_fish_hunt</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Agriculture, Forestry, Fishing, and Hunting sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_arts_recreation</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Arts, Entertainment, and Recreation sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_construction</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Construction sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_edu</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Educational Services sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_finance</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Finance and Insurance sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_health</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Health Care and Social Assistance sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_other_industries</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in industries not classified</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_info</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Information sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_mgmt</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Management of Companies and Enterprises sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_mfg</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Manufacturing sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_mining_oil_gas</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Mining, Quarrying, and Oil and Gas Extraction sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_other_services</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in Other Services (except Public Administration)</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_prof_tech</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Professional, Scientific, and Technical Services sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_real_estate</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Real Estate and Rental and Leasing sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_retail</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Retail Trade sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_total</td>
-                  <td>float64</td>
+                   
                   <td>Total number of employees across all sectors</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_transport</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Transportation and Warehousing sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Work')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_utilities</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Utilities sector</td>
                   </tr>
 <tr data-domain="Work">
-                  <td><a href="#" onclick="goToDomainSection('Economy')">Economic and Employment</a></td>
+                  <td>Economic and Employment</td>
                   <td>County Business Patterns (CBP)</td>
                   <td>County Business Patterns</td>
                   <td>w1_emp_wholesale</td>
-                  <td>float64</td>
+                   
                   <td>Number of employees in the Wholesale Trade sector</td>
                   </tr>
                   <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of alcohol and tobacco; convenience stores </td>
         <td>National Establishment Time Series</td>
         <td>den_cstores_per_1000_people</td>
-        <td>float</td>
+            
         <td>Convenience Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of alcohol and tobacco; convenience stores </td>
         <td>National Establishment Time Series</td>
         <td>aden_cstores_persqm</td>
-        <td>float</td>
+            
         <td>Convenience Stores per sq mile</td>
         </tr>
 <!--PYTHON STUFF-->
@@ -3366,782 +3125,782 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         <td>Number of alcohol and tobacco; convenience stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec5_fips_2010</td>
-        <td>int64</td>
+          
         <td>Fips code for 2010</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of alcohol and tobacco; convenience stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec5_stname</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of alcohol and tobacco; convenience stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec5_ctyname</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_totpop</td>
-        <td>float</td>
+            
         <td>Total population</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Total counts: Bars, Night Clubs, and Lounges</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Bars, Night Clubs, and Lounges per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Bars, Night Clubs, and Lounges per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_totpop</td>
-        <td>float</td>
+            
         <td>Total counts: Retail Bakeries</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Retail Bakeries per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Retail Bakeries per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_barsnightclubslounges</td>
-        <td>float</td>
+            
         <td>Total counts: Coffee Shops and Cafes</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_retailbakeries</td>
-        <td>float</td>
+            
         <td>Coffee Shops and Cafes per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_retailbakeries</td>
-        <td>float</td>
+            
         <td>Coffee Shops and Cafes per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_retailbakeries</td>
-        <td>float</td>
+            
         <td>Total counts: Fast Food Restaurants</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_coffeeshopscafes</td>
-        <td>float</td>
+            
         <td>Fast Food Restaurants per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_coffeeshopscafes</td>
-        <td>float</td>
+            
         <td>Fast Food Restaurants per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_coffeeshopscafes</td>
-        <td>float</td>
+            
         <td>Total counts: Delicatessens, sandwich and submarine shops</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_fastfood</td>
-        <td>float</td>
+            
         <td>Delicatessens, sandwich and submarine shops per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_fastfood</td>
-        <td>float</td>
+            
         <td>Delicatessens, sandwich and submarine shops per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_fastfood</td>
-        <td>float</td>
+            
         <td>Total counts: Pizza Restaurants</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_delis</td>
-        <td>float</td>
+            
         <td>Pizza Restaurants per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_delis</td>
-        <td>float</td>
+            
         <td>Pizza Restaurants per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_delis</td>
-        <td>float</td>
+            
         <td>Total counts: Sit-down Restaurants</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_pizza</td>
-        <td>float</td>
+            
         <td>Sit-down Restaurants per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_pizza</td>
-        <td>float</td>
+            
         <td>Sit-down Restaurants per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_pizza</td>
-        <td>float</td>
+            
         <td>Total counts: Total Eating Places</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_sitdownrestaurants</td>
-        <td>float</td>
+            
         <td>Total Eating Places per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_sitdownrestaurants</td>
-        <td>float</td>
+            
         <td>Total Eating Places per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_aden_sitdownrestaurants</td>
-        <td>int64</td>
+          
         <td>Fips code for 2010</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_count_totaleatingplaces</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of eating and drinking places</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_den_totaleatingplaces</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec6_fips_2010</td>
-        <td>int64</td>
+          
         <td>Fips code for 2010</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_STNAME</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_CTYNAME</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_totpop</td>
-        <td>float</td>
+            
         <td>Total population</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aland20</td>
-        <td>float</td>
+            
         <td>Census land area, square miles</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_clothingshoestores</td>
-        <td>float</td>
+            
         <td>Total counts: Clothing and Shoe Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_clothingshoestores</td>
-        <td>float</td>
+            
         <td>Clothing and Shoe Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_clothingshoestores</td>
-        <td>float</td>
+            
         <td>Clothing and Shoe Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_furnitureappliance</td>
-        <td>float</td>
+            
         <td>Total counts: Furniture and Appliance Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_furnitureappliance</td>
-        <td>float</td>
+            
         <td>Furniture and Appliance Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_furnitureappliance</td>
-        <td>float</td>
+            
         <td>Furniture and Appliance Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_musicstores</td>
-        <td>float</td>
+            
         <td>Total counts: Music Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_musicstores</td>
-        <td>float</td>
+            
         <td>Music Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_musicstores</td>
-        <td>float</td>
+            
         <td>Music Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_hardwaregarden</td>
-        <td>float</td>
+            
         <td>Total counts: Hardware and Garden Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_hardwaregarden</td>
-        <td>float</td>
+            
         <td>Hardware and Garden Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_hardwaregarden</td>
-        <td>float</td>
+            
         <td>Hardware and Garden Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_deptvarietygeneral</td>
-        <td>float</td>
+            
         <td>Total counts: Department, Variety, and Other General Merchandise Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_deptvarietygeneral</td>
-        <td>float</td>
+            
         <td>Department, Variety, and Other General Merchandise Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_deptvarietygeneral</td>
-        <td>float</td>
+            
         <td>Department, Variety, and Other General Merchandise Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_usedmerchstores</td>
-        <td>float</td>
+            
         <td>Total counts: Used Merchandise Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_usedmerchstores</td>
-        <td>float</td>
+            
         <td>Used Merchandise Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_usedmerchstores</td>
-        <td>float</td>
+            
         <td>Used Merchandise Stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_petstorespetsupplies</td>
-        <td>float</td>
+            
         <td>Total counts: Pet Stores and Pet Supplies</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_petstorespetsupplies</td>
-        <td>float</td>
+            
         <td>Pet Stores and Pet Supplies per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_petstorespetsupplies</td>
-        <td>float</td>
+            
         <td>Pet Stores and Pet Supplies per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_count_shoerepairshops</td>
-        <td>float</td>
+            
         <td>Total counts: Shoe Repair Shops</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_den_shoerepairshops</td>
-        <td>float</td>
+            
         <td>Shoe Repair Shops per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of retail stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec3_aden_shoerepairshops</td>
-        <td>float</td>
+            
         <td>Shoe Repair Shops per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_FIPS_2010</td>
-        <td>int64</td>
+          
         <td>Fips code for 2010</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_STNAME</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_CTYNAME</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_traffic</td>
-        <td>float</td>
+            
         <td>Mean of average daily traffic counts in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_min_traffic</td>
-        <td>float</td>
+            
         <td>Lowest average daily traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_max_traffic</td>
-        <td>float</td>
+            
         <td>Highest average daily traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_hw_traffic</td>
-        <td>float</td>
+            
         <td>Mean of average daily highway traffic counts in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_min_hw_traffic</td>
-        <td>float</td>
+            
         <td>Lowest average daily highway traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_max_hw_traffic</td>
-        <td>float</td>
+            
         <td>Highest average daily highway traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_nonhw_traffic</td>
-        <td>float</td>
+            
         <td>Mean of average daily non-highway traffic counts in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_min_nonhw_traffic</td>
-        <td>float</td>
+            
         <td>Lowest average daily non-highway traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_max_nonhw_traffic</td>
-        <td>float</td>
+            
         <td>Highest average daily non-highway traffic count in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_count_intersections</td>
-        <td>float</td>
+            
         <td>Number of intersections in tract</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_traffic_per_intersection</td>
-        <td>float</td>
+            
         <td>Avg daily traffic per intersection (mean_traffic/count_intersections)</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_hw_traffic_per_intersection</td>
-        <td>float</td>
+            
         <td>Avg daily highway traffic per intersection (mean_hw_traffic/count_intersections)</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of post offices; banks</td>
         <td>National Establishment Time Series Database</td>
         <td>ec1_mean_nh_traffic_per_intersection</td>
-        <td>float</td>
+            
         <td>Avg daily non-highway traffic per intersection (mean_nonhw_traffic/count_intersections)</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_STNAME</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_CTYNAME</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_totpop</td>
-        <td>float</td>
+            
         <td>Total population</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_grocery</td>
-        <td>float</td>
+            
         <td>Total counts: Grocery stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_grocery</td>
-        <td>float</td>
+            
         <td>Grocery stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_grocery</td>
-        <td>float</td>
+            
         <td>Grocery stores per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_supermarkets</td>
-        <td>float</td>
+            
         <td>Total counts: Supermarkets</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_supermarkets</td>
-        <td>float</td>
+            
         <td>Supermarkets per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_supermarkets</td>
-        <td>float</td>
+            
         <td>Supermarkets per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_meatfish</td>
-        <td>float</td>
+            
         <td>Total counts: Meat and fish markets</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_meatfish</td>
-        <td>float</td>
+            
         <td>Meat and fish markets per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_meatfish</td>
-        <td>float</td>
+            
         <td>Meat and fish markets per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_fruitveg</td>
-        <td>float</td>
+            
         <td>Total counts: Fruit and vegetable markets</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_fruitveg</td>
-        <td>float</td>
+            
         <td>Fruit and vegetable markets per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_fruitveg</td>
-        <td>float</td>
+            
         <td>Fruit and vegetable markets per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_warehousefood</td>
-        <td>float</td>
+            
         <td>Total counts: Warehouse Clubs selling food</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_warehousefood</td>
-        <td>float</td>
+            
         <td>Warehouse Clubs selling food per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_warehousefood</td>
-        <td>float</td>
+            
         <td>Warehouse Clubs selling food per sq mile</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_count_totalfoodstores</td>
-        <td>float</td>
+            
         <td>Total counts: Total Food Stores</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_den_totalfoodstores</td>
-        <td>float</td>
+            
         <td>Total Food Stores per 1000 people</td>
         </tr>
 <tr data-domain="Economy">
-        <td><a href="#" onclick="goToDomainSection('Economy')">Business and Retail</a></td>
+        <td>Business and Retail</td>
         <td>Number of  grocery stores</td>
         <td>National Establishment Time Series Database</td>
         <td>ec2_aden_totalfoodstores</td>
-        <td>float</td>
+            
         <td>Total Food Stores per sq mile</td>
         </tr>
 
       
     
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_reg_voters</td>
@@ -4149,7 +3908,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         <td>Number of registered voters</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_ballots_cast</td>
@@ -4157,7 +3916,7 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         <td>Ballots cast in general election, all races</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_cvap</td>
@@ -4165,99 +3924,99 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         <td>Citizen voting age population</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_reg_voters_pct</td>
-        <td>float</td>
+            
         <td>% eligible voters registered (reg_voters / cvap), top coded</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_voter_turnout_pct</td>
-        <td>float</td>
+            
         <td>% eligible voters casting ballots (ballots_cast / cvap), top coded</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_reg_voter_turnout_pct</td>
-        <td>float</td>
+            
         <td>% registered voters casting ballots (ballots_cast / reg_voters), top coded</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_pres_dem_ratio</td>
-        <td>float</td>
+            
         <td>% votes for Democratic presidential candidate</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_pres_rep_ratio</td>
-        <td>float</td>
+            
         <td>% votes for Republican presidential candidate</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_sen_dem_ratio</td>
-        <td>float</td>
+            
         <td>% votes for Democratic senate candidate</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_sen_rep_ratio</td>
-        <td>float</td>
+            
         <td>% votes for Republican senate candidate</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_partisan_index_dem</td>
-        <td>float</td>
+            
         <td>Democratic partisanship index (% votes cast, past 6 years)</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_partisan_index_rep</td>
-        <td>float</td>
+            
         <td>Republican partisanship index (% votes cast, past 6 years)</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_FIPS_2010</td>
-        <td>int64</td>
+          
         <td>Fips code for 2010</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_stname</td>
-        <td>str</td>
+            
         <td>State name</td>
         </tr>
 <tr data-domain="Power">
-        <td><a href="#" onclick="goToDomainSection('Power')">Voting</a></td>
+        <td>Voting</td>
         <td>Number of registered voters</td>
         <td>NANDA from Federal Election Assistance Commission</td>
         <td>p1_ctyname</td>
-        <td>str</td>
+            
         <td>County name</td>
         </tr>
 
@@ -4353,9 +4112,29 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         if (page) page.style.display = 'block';
       }
 
+      function showMetaData2(datasetsId){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'none';
+        document.getElementById('codebook').classList.remove('active');
+        
+        const page = document.getElementById(datasetsId);
+        if (page) page.style.display = 'block';
+      }
+
       function hideMetaData(){
         document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
         document.querySelector('.datasetspage').style.display = 'block';
+
+        if (document.querySelector('.nav-link[data-tab="codebook"]').classList.contains('active')){
+          document.getElementById('codebook').classList.add('active');
+        }
+      }
+
+      function hideMetaData2(){
+        document.querySelectorAll('.metadata').forEach(section => section.style.display = 'none');
+        document.querySelector('.datasetspage').style.display = 'block';
+        document.querySelector('.nav-link[data-tab="codebook"]').classList.add('active');
+
       }
       
       function showCodebook(){
@@ -4366,6 +4145,10 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
         const datasetTab = document.querySelector('.nav-link[data-tab="datasets"]');
         datasetTab.classList.remove('active');
         window.scrollTo(0,-10);
+      }
+
+      function hideCodebook(){
+        document.getElementById('codebook').classList.remove('active')
       }
 
   
