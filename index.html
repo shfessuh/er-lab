@@ -11,6 +11,329 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+
+      :root {
+        --panel-bg: rgba(26,26,46,0.95);
+        --panel-bg-2: rgba(26,26,46,0.95);
+        --panel-border: rgba(255,255,255,0.12);
+        --panel-text: #f0f0f0;
+        --panel-text-muted: rgba(255,255,255,0.55);
+        --panel-accent: #4ECDC4;
+        --box-bg: rgba(0,0,0,0.25);
+        --box-border: rgba(255,255,255,0.1);
+        --dim-gray: #555;
+      }
+      .leaflet-interactive:focus { outline: none; }
+      path.leaflet-interactive { outline: none; }
+      #map-container {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        height: calc(100vh - 20px);
+        min-height: 600px;
+        display: flex;
+        position: relative;
+        background: #1a1a2e;
+        overflow: hidden;
+      }
+
+      #map-sidebar {
+        width: 190px;
+        flex-shrink: 0;
+        background: var(--panel-bg);
+        backdrop-filter: blur(16px);
+        padding: 22px 14px;
+        font-family: 'Inter', sans-serif;
+        color: var(--panel-text);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .sidebar-header {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.6);
+      }
+      .mode-box {
+        background: var(--box-bg);
+        border: 1px solid var(--box-border);
+        border-radius: 6px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .mode-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--panel-text);
+      }
+      .mode-header:hover { background: rgba(255,255,255,0.04); }
+      .mode-header .title-wrap { display: flex; align-items: center; gap: 6px; }
+      .help-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--panel-accent);
+        color: #1a1a2e;
+        font-size: 9px;
+        font-weight: 700;
+        cursor: help;
+      }
+      .chevron {
+        font-size: 9px;
+        color: rgba(255,255,255,0.5);
+        transition: transform 0.2s;
+      }
+      .mode-box.open { border-color: rgba(78,205,196,0.4); }
+      .mode-box.open .chevron { transform: rotate(180deg); }
+      .mode-body {
+        display: none;
+        padding: 10px 12px 12px;
+        border-top: 1px solid var(--box-border);
+        font-size: 11px;
+      }
+      .mode-box.open .mode-body { display: block; }
+      .mode-body select {
+        width: 100%;
+        padding: 5px 7px;
+        font-size: 11px;
+        font-family: inherit;
+        background: rgba(0,0,0,0.35);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 4px;
+        color: var(--panel-text);
+        margin-bottom: 6px;
+      }
+      .mode-body select option { background: #1a1a2e; color: var(--panel-text); }
+      .mode-desc {
+        font-size: 10px;
+        color: rgba(255,255,255,0.5);
+        line-height: 1.5;
+        margin: 6px 0;
+      }
+      .typology-options label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 0;
+        cursor: pointer;
+        font-size: 11px;
+        color: rgba(255,255,255,0.8);
+      }
+      .typology-swatch {
+        width: 11px;
+        height: 11px;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+      .slider-label {
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(255,255,255,0.4);
+        margin-bottom: 4px;
+        margin-top: 8px;
+      }
+      .slider-row { display: flex; align-items: center; gap: 6px; }
+      .slider-row input[type=range] { flex: 1; accent-color: var(--panel-accent); }
+      .slider-val {
+        font-size: 11px;
+        color: var(--panel-accent);
+        font-weight: 700;
+        min-width: 26px;
+        text-align: right;
+      }
+      .reset-btn {
+        margin-top: auto;
+        padding: 10px 12px;
+        background: rgba(78,205,196,0.15);
+        color: var(--panel-accent);
+        border: 1px solid rgba(78,205,196,0.4);
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .reset-btn:hover { background: rgba(78,205,196,0.25); }
+
+      #cluster-map {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        background: #1a1a2e;
+      }
+      .leaflet-container { background: #1a1a2e !important; }
+
+      #county-panel {
+        position: absolute;
+        right: -260px;
+        top: 200px;
+        width: 230px;
+        max-height: calc(100% - 220px);
+        background: var(--panel-bg);
+        backdrop-filter: blur(16px);
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        color: var(--panel-text);
+        overflow-y: auto;
+        border: 1px solid var(--panel-border);
+        border-radius: 10px;
+        z-index: 9999;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      }
+      #county-panel.open { right: 14px; }
+      #county-panel .panel-inner { padding: 18px 16px; position: relative; }
+      /* Close X — positioned above panel content with higher z-index so it always catches clicks */
+      #county-panel .close-x {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 22px;
+        color: rgba(255,255,255,0.5);
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        line-height: 1;
+        z-index: 10;
+        user-select: none;
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+      #county-panel .close-x:hover { color: #fff; background: rgba(255,255,255,0.15); }
+      #county-panel h2 {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 3px;
+        color: var(--panel-text);
+        line-height: 1.3;
+        padding-right: 32px;
+      }
+      #county-panel .fips { font-size: 10px; color: rgba(255,255,255,0.35); }
+      #county-panel .pop-line {
+        font-size: 10px;
+        color: rgba(255,255,255,0.55);
+        margin-top: 2px;
+      }
+      #county-panel .sec {
+        font-size: 10px;
+        font-weight: 600;
+        color: rgba(255,255,255,0.45);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 16px 0 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      #county-panel .cluster-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      #county-panel .cluster-dot { width: 8px; height: 8px; border-radius: 50%; }
+      #county-panel .typ-desc {
+        font-size: 10.5px;
+        color: rgba(255,255,255,0.6);
+        line-height: 1.6;
+        margin-top: 8px;
+      }
+      #county-panel .idx-row { margin: 6px 0; font-size: 10.5px; }
+      #county-panel .idx-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+      }
+      #county-panel .idx-name { color: rgba(255,255,255,0.75); }
+      #county-panel .idx-val { color: var(--panel-text); font-weight: 600; }
+      #county-panel .idx-bar-bg {
+        height: 4px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      #county-panel .idx-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #aae2f8,#4755a5);
+        border-radius: 2px;
+      }
+      #county-panel .idx-na {
+        font-size: 10px;
+        color: rgba(255,255,255,0.3);
+        font-style: italic;
+      }
+      #county-panel .driver-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        font-size: 10.5px;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+      #county-panel .driver-row:last-child { border-bottom: none; }
+      #county-panel .driver-name { color: rgba(255,255,255,0.65); }
+      #county-panel .driver-val { color: var(--panel-text); font-weight: 500; }
+
+      .leaflet-tooltip {
+        background: rgba(26,26,46,0.95) !important;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.12) !important;
+        border-radius: 8px !important;
+        padding: 10px 14px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+        font-family: 'Inter', sans-serif !important;
+        color: #f0f0f0 !important;
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+      }
+      .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before,
+      .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { display: none !important; }
+      .tt-name { font-weight: 600; font-size: 13px; color: #f0f0f0; }
+      .tt-fips { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+      .tt-pop  { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+      .tt-val  { font-size: 11px; color: #4ECDC4; margin-top: 3px; font-weight: 600; }
+
+      #map-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255,255,255,0.6);
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        z-index: 1000;
+      }
+    
+    </style>
 
   </head>
   <body>
@@ -29,6 +352,7 @@
               <li class="nav-link active" data-tab="about" onclick="hideMetaData()"><a href="#">About</a></li>
               <li class="nav-link" data-tab="datasets" onclick="hideMetaData()"><a href="#">Datasets</a></li>
               <li class="nav-link" data-tab="codebook" onclick="hideMetaData2()"><a href="#">Codebook</a></li>
+              <li class="nav-link" data-tab="interactive-map" onclick="hideMetaData()"><a href="#">Interactive Map</a></li>
               <li class="nav-link" data-tab="contact" onclick = "hideMetaData()"><a href="#">Contact</a></li>
             </ul>
           </nav>
@@ -4027,6 +4351,77 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
 
           </section>
 
+<section id="interactive-map" class="tab-section" style="padding:0; margin:-20px 0 0 0;">
+            <div id="map-container">
+
+              <div id="map-sidebar">
+                <div class="sidebar-header">DATA VIEW</div>
+
+                <div class="mode-box" id="box-typology">
+                  <div class="mode-header" onclick="toggleBox('typology')">
+                    <div class="title-wrap">
+                      <span>Typology</span>
+                      <span class="help-icon" title="Counties grouped into clusters based on shared structural characteristics. Typology colors are always shown on the map.">?</span>
+                    </div>
+                    <span class="chevron">▼</span>
+                  </div>
+                  <div class="mode-body">
+                    <div class="mode-desc">Map always colored by typology. Uncheck a typology to fade those counties to gray.</div>
+                    <div class="typology-options" id="typology-options"></div>
+                  </div>
+                </div>
+
+                <div class="mode-box" id="box-index">
+                  <div class="mode-header" onclick="toggleBox('index')">
+                    <div class="title-wrap">
+                      <span>Index</span>
+                      <span class="help-icon" title="Composite scores (0–100) per domain, built from multiple indicators. Use the slider to filter — counties below your threshold fade to gray.">?</span>
+                    </div>
+                    <span class="chevron">▼</span>
+                  </div>
+                  <div class="mode-body">
+                    <select id="index-select"></select>
+                    <div class="mode-desc" id="index-desc"></div>
+                    <div class="slider-label">Score at least</div>
+                    <div class="slider-row">
+                      <input type="range" id="index-slider" min="0" max="100" value="0" step="1">
+                      <div class="slider-val" id="index-slider-val">0</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mode-box" id="box-indicator">
+                  <div class="mode-header" onclick="toggleBox('indicator')">
+                    <div class="title-wrap">
+                      <span>Indicators</span>
+                      <span class="help-icon" title="Individual raw variables measured at the county level. Slider filters by percentile rank — counties below the threshold fade to gray.">?</span>
+                    </div>
+                    <span class="chevron">▼</span>
+                  </div>
+                  <div class="mode-body">
+                    <select id="indicator-select"></select>
+                    <div class="mode-desc">Filter by percentile rank of the selected variable.</div>
+                    <div class="slider-label">Percentile at least</div>
+                    <div class="slider-row">
+                      <input type="range" id="indicator-slider" min="0" max="100" value="0" step="1">
+                      <div class="slider-val" id="indicator-slider-val">0</div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="reset-btn" onclick="resetAll()">Reset View</button>
+              </div>
+
+              <div id="cluster-map"></div>
+              <div id="map-loading">Loading map...</div>
+
+              <div id="county-panel">
+                <button type="button" class="close-x" id="panel-close-btn" aria-label="Close">&times;</button>
+                <div class="panel-inner" id="cp-body"></div>
+              </div>
+            </div>
+          </section>
+
           <!-- Contact -->
           <section id="contact" class="tab-section">
             <div class="section_banner">
@@ -4047,7 +4442,15 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
           document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
           document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
           this.classList.add('active');
-          document.getElementById(this.dataset.tab).classList.add('active');
+          const activeSection = document.getElementById(this.dataset.tab);
+          if (activeSection) activeSection.classList.add('active');
+          if (this.dataset.tab === 'interactive-map' && !window.mapInitialized) {
+            window.mapInitialized = true;
+            initMap();
+          }
+          if (this.dataset.tab === 'interactive-map' && window.map) {
+            setTimeout(() => window.map.invalidateSize(), 150);
+          }
         });
       });
 
@@ -4224,6 +4627,340 @@ toward rent and utilities) (Excludes zero values and missing values) "</td>
       mediaQuery2.addEventListener('change', backShrink);
       backShrink(mediaQuery2);
 
+
+      // ─── Close button wiring (uses addEventListener so it works reliably) ───
+      document.addEventListener('DOMContentLoaded', function() {
+        var closeBtn = document.getElementById('panel-close-btn');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            document.getElementById('county-panel').classList.remove('open');
+          });
+        }
+      });
+
+      var state = {
+        activeIndex: null,
+        activeIndicator: null,
+        filters: {
+          typologies: new Set(),
+          indexMin: 0,
+          indicatorMin: 0,
+        },
+      };
+
+      var geojsonLayer = null;
+      var meta = null;
+      var geojsonData = null;
+      var map = null;
+
+      function initMap() {
+        map = L.map('cluster-map', {
+          minZoom: 3,
+          maxZoom: 12,
+          zoomSnap: 0.25,
+          zoomDelta: 0.25
+        }).setView([30, -96], 4.3);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+          attribution: '© OpenStreetMap © CARTO', maxZoom: 19
+        }).addTo(map);
+
+        fetch('cluster_data.json')
+          .then(function(r) { return r.json(); })
+          .then(function(m) {
+            meta = m;
+            return fetch('counties.geojson');
+          })
+          .then(function(r) { return r.json(); })
+          .then(function(gj) {
+            geojsonData = gj;
+            document.getElementById('map-loading').style.display = 'none';
+
+            buildControls();
+            drawMap();
+
+            if (meta.insetBounds) {
+              var ib = meta.insetBounds, akB = ib.akBounds, hiB = ib.hiBounds, pad = ib.pad;
+              var south = Math.min(akB[1], hiB[1]) - pad;
+              var north = Math.max(akB[3], hiB[3]) + pad;
+              var divX = (akB[2] + hiB[0]) / 2;
+              var akW = akB[0] - pad, hiE = hiB[2] + pad;
+              L.rectangle([[south, akW], [north, divX]], { color: "rgba(255,255,255,0.3)", weight: 1, fill: false }).addTo(map);
+              L.rectangle([[south, divX], [north, hiE]], { color: "rgba(255,255,255,0.3)", weight: 1, fill: false }).addTo(map);
+              L.marker([south + 0.5, (akW + divX) / 2], { interactive: false, icon: L.divIcon({ className: '', html: '<div style="font-family:Inter,sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);letter-spacing:2px;text-transform:uppercase;">ALASKA</div>', iconSize: [80, 14], iconAnchor: [40, 7] }) }).addTo(map);
+              L.marker([south + 0.5, (divX + hiE) / 2], { interactive: false, icon: L.divIcon({ className: '', html: '<div style="font-family:Inter,sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,0.75);letter-spacing:2px;text-transform:uppercase;">HAWAII</div>', iconSize: [80, 14], iconAnchor: [40, 7] }) }).addTo(map);
+            }
+            setTimeout(function() { map.invalidateSize(); }, 200);
+          });
+      }
+
+      function buildControls() {
+        var tOpts = document.getElementById('typology-options');
+        var labels = meta.clusterLabels || {};
+        var colors = meta.clusterColors || {};
+        Object.keys(labels).forEach(function(k) {
+          var row = document.createElement('label');
+          row.innerHTML = '<input type="checkbox" value="' + k + '" checked> '
+            + '<span class="typology-swatch" style="background:' + (colors[k] || '#555') + ';"></span>'
+            + (labels[k] || 'Typology ' + k);
+          row.querySelector('input').addEventListener('change', function() {
+            updateTypologyFilter();
+            refresh();
+          });
+          tOpts.appendChild(row);
+        });
+
+        var iSel = document.getElementById('index-select');
+        Object.keys(meta.indexDefinitions).forEach(function(key) {
+          var opt = document.createElement('option');
+          opt.value = key;
+          opt.textContent = meta.indexDefinitions[key].label;
+          iSel.appendChild(opt);
+        });
+        state.activeIndex = Object.keys(meta.indexDefinitions)[0];
+        iSel.value = state.activeIndex;
+        document.getElementById('index-desc').textContent = meta.indexDefinitions[state.activeIndex].description;
+        iSel.addEventListener('change', function() {
+          state.activeIndex = iSel.value;
+          document.getElementById('index-desc').textContent = meta.indexDefinitions[state.activeIndex].description;
+          refresh();
+        });
+
+        var iSlider = document.getElementById('index-slider');
+        iSlider.addEventListener('input', function() {
+          state.filters.indexMin = Number(iSlider.value);
+          document.getElementById('index-slider-val').textContent = iSlider.value;
+          refresh();
+        });
+
+        var indSel = document.getElementById('indicator-select');
+        var indMeta = meta.indicatorMeta || {};
+        Object.keys(indMeta).forEach(function(label) {
+          var opt = document.createElement('option');
+          opt.value = label;
+          opt.textContent = label;
+          indSel.appendChild(opt);
+        });
+        state.activeIndicator = Object.keys(indMeta)[0];
+        indSel.value = state.activeIndicator;
+        indSel.addEventListener('change', function() {
+          state.activeIndicator = indSel.value;
+          refresh();
+        });
+
+        var indSlider = document.getElementById('indicator-slider');
+        indSlider.addEventListener('input', function() {
+          state.filters.indicatorMin = Number(indSlider.value);
+          document.getElementById('indicator-slider-val').textContent = indSlider.value;
+          refresh();
+        });
+      }
+
+      function updateTypologyFilter() {
+        var boxes = document.querySelectorAll('#typology-options input[type=checkbox]');
+        var checked = [];
+        var total = 0;
+        boxes.forEach(function(b) {
+          total++;
+          if (b.checked) checked.push(b.value);
+        });
+        if (checked.length === total || checked.length === 0) {
+          state.filters.typologies = new Set();
+        } else {
+          state.filters.typologies = new Set(checked);
+        }
+      }
+
+      window.toggleBox = function(mode) {
+        var box = document.getElementById('box-' + mode);
+        box.classList.toggle('open');
+      };
+
+      window.resetAll = function() {
+        state.filters.typologies = new Set();
+        state.filters.indexMin = 0;
+        state.filters.indicatorMin = 0;
+
+        document.querySelectorAll('#typology-options input[type=checkbox]').forEach(function(b) {
+          b.checked = true;
+        });
+
+        var iS = document.getElementById('index-slider');
+        iS.value = 0;
+        document.getElementById('index-slider-val').textContent = 0;
+        var idS = document.getElementById('indicator-slider');
+        idS.value = 0;
+        document.getElementById('indicator-slider-val').textContent = 0;
+
+        document.querySelectorAll('.mode-box').forEach(function(b) { b.classList.remove('open'); });
+
+        // Close the slide-in county panel
+        document.getElementById('county-panel').classList.remove('open');
+
+        // Mirror the initial view settings (fractional zoom + lower latitude)
+        map.setView([30, -96], 4.3);
+        refresh();
+      };
+
+      var indicatorPctCache = null;
+      function buildIndicatorPercentiles() {
+        indicatorPctCache = {};
+        var byInd = {};
+        geojsonData.features.forEach(function(f) {
+          var fips = f.properties.FIPS;
+          var cf = (meta.countyFeatures || {})[fips];
+          if (!cf) return;
+          Object.keys(cf).forEach(function(lab) {
+            if (!byInd[lab]) byInd[lab] = [];
+            if (cf[lab] != null) byInd[lab].push({ fips: fips, val: cf[lab] });
+          });
+        });
+        Object.keys(byInd).forEach(function(lab) {
+          var arr = byInd[lab].sort(function(a, b) { return a.val - b.val; });
+          indicatorPctCache[lab] = {};
+          arr.forEach(function(item, i) {
+            indicatorPctCache[lab][item.fips] = (i / Math.max(1, arr.length - 1)) * 100;
+          });
+        });
+      }
+      function indicatorPercentile(fips, label) {
+        if (!indicatorPctCache) buildIndicatorPercentiles();
+        return (indicatorPctCache[label] || {})[fips];
+      }
+
+      function passesFilters(props) {
+        if (state.filters.typologies.size > 0) {
+          if (!state.filters.typologies.has(String(props.cluster))) return false;
+        }
+        if (state.filters.indexMin > 0) {
+          var v = props['idx_' + state.activeIndex];
+          if (v == null || v < state.filters.indexMin) return false;
+        }
+        if (state.filters.indicatorMin > 0) {
+          var pct = indicatorPercentile(props.FIPS, state.activeIndicator);
+          if (pct == null || pct < state.filters.indicatorMin) return false;
+        }
+        return true;
+      }
+
+      function styleFor(feature) {
+        var p = feature.properties;
+        var passes = passesFilters(p);
+
+        if (!passes) {
+          return {
+            fillColor: '#3a3a4e',
+            fillOpacity: 0.5,
+            color: 'rgba(0,0,0,0.4)',
+            weight: 0.3
+          };
+        }
+
+        var typColor = (meta.clusterColors || {})[p.cluster] || '#bbb';
+        return {
+          fillColor: typColor,
+          fillOpacity: 0.85,
+          color: 'rgba(0,0,0,0.5)',
+          weight: 0.4
+        };
+      }
+
+      function drawMap() {
+        if (geojsonLayer) geojsonLayer.remove();
+        geojsonLayer = L.geoJSON(geojsonData, {
+          style: styleFor,
+          onEachFeature: function(feature, layer) {
+            var p = feature.properties;
+            layer.bindTooltip(buildTooltip(p));
+            layer.on('mouseover', function() {
+              this.setStyle({ weight: 1.5, color: 'rgba(255,255,255,0.9)' });
+            });
+            layer.on('mouseout', function() { geojsonLayer.resetStyle(this); });
+            layer.on('click', function() { showCountyPanel(p); });
+          }
+        }).addTo(map);
+      }
+
+      function refresh() {
+        if (geojsonLayer) {
+          geojsonLayer.setStyle(styleFor);
+          geojsonLayer.eachLayer(function(l) {
+            l.unbindTooltip();
+            l.bindTooltip(buildTooltip(l.feature.properties));
+          });
+        }
+      }
+
+      function buildTooltip(p) {
+        var out = '<div class="tt-name">' + p.name + ', ' + p.state + '</div>';
+        out += '<div class="tt-fips">FIPS ' + p.FIPS + '</div>';
+        if (p.pop) out += '<div class="tt-pop">Pop: ' + p.pop.toLocaleString() + '</div>';
+        var lab = (meta.clusterLabels || {})[p.cluster] || 'N/A';
+        out += '<div class="tt-val">' + lab + '</div>';
+        return out;
+      }
+
+      function showCountyPanel(p) {
+        var fips = p.FIPS;
+        var c = p.cluster;
+        var colors = meta.clusterColors || {};
+        var labels = meta.clusterLabels || {};
+        var clusterColor = colors[c] || '#888';
+        var clusterLabel = labels[c] || (c != null ? 'Cluster ' + c : 'N/A');
+
+        var html = '';
+        html += '<h2>' + p.name + ', ' + p.state + '</h2>';
+        html += '<div class="fips">FIPS ' + fips + '</div>';
+        if (p.pop) html += '<div class="pop-line">Population: ' + p.pop.toLocaleString() + '</div>';
+
+        html += '<div class="cluster-badge" style="background:' + clusterColor + '33;color:' + clusterColor + ';">';
+        html += '<div class="cluster-dot" style="background:' + clusterColor + ';"></div>' + clusterLabel + '</div>';
+
+        var ci = (meta.clusterInfo || {})[c];
+        if (ci) {
+          html += '<div class="typ-desc">' + ci.countyCount.toLocaleString() + ' counties nationwide share this typology.</div>';
+        }
+
+        html += '<div class="sec">Domain Indices</div>';
+        Object.keys(meta.indexDefinitions).forEach(function(key) {
+          var def = meta.indexDefinitions[key];
+          var val = p['idx_' + key];
+          html += '<div class="idx-row">';
+          html += '<div class="idx-label"><span class="idx-name">' + def.label + '</span>';
+          if (val != null) {
+            html += '<span class="idx-val">' + val.toFixed(1) + '</span></div>';
+            html += '<div class="idx-bar-bg"><div class="idx-bar-fill" style="width:' + val + '%;"></div></div>';
+          } else {
+            html += '<span class="idx-na">N/A</span></div>';
+          }
+          html += '</div>';
+        });
+
+        if (ci && ci.topDrivers) {
+          html += '<div class="sec">Top Drivers</div>';
+          var cf = (meta.countyFeatures || {})[fips] || {};
+          Object.keys(ci.topDrivers).forEach(function(k) {
+            if (cf[k] != null) {
+              html += '<div class="driver-row"><span class="driver-name">' + k + '</span><span class="driver-val">' + formatVal(k, cf[k]) + '</span></div>';
+            }
+          });
+        }
+
+        document.getElementById('cp-body').innerHTML = html;
+        document.getElementById('county-panel').classList.add('open');
+      }
+
+      function formatVal(label, val) {
+        if (label.indexOf('Income') >= 0) return '$' + Number(val).toLocaleString();
+        if (label.indexOf('%') >= 0 || label.indexOf('Higher Education') >= 0) {
+          if (val < 1) return (val * 100).toFixed(1) + '%';
+          return val.toFixed(1) + '%';
+        }
+        if (typeof val === 'number') return val.toLocaleString();
+        return String(val);
+      }
+    
     </script>
 
   </body>
